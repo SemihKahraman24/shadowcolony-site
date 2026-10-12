@@ -37,7 +37,7 @@ function altBilgi(t, kod, derinlik) {
   const u = "../".repeat(derinlik);
   return `<footer class="alt-bilgi"><div class="kap">
   <div><a href="${u}${kod}/">${t.ana}</a><a href="${u}${kod}/guide/">${t.m_rehber}</a><a href="${u}press/">${t.m_basin}</a><a href="${u}privacy/">${t.gizlilik}</a></div>
-  <div>${t.destek}: <a href="mailto:support@shadowcolonygame.com">support@shadowcolonygame.com</a> · © 2026 Shadow Colony · ${t.muzik}</div>
+  <div>${t.destek}: <a href="mailto:support@shadowcolonygame.com">support@shadowcolonygame.com</a> · © 2026 Shadow Colony</div>
 </div></footer>`;
 }
 
