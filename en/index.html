@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Colony — Live in the dark. Get back before dawn.</title>
+<meta name="description" content="Raid the sun-scorched surface at night, get back before dawn and build an underground colony. A survival colony game for Android.">
+<meta property="og:title" content="Shadow Colony">
+<meta property="og:description" content="Live in the dark. Get back before dawn.">
+<meta property="og:image" content="https://shadowcolonygame.com/img/hero.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#12171F">
+<link rel="alternate" hreflang="en" href="https://shadowcolonygame.com/en/">
+<link rel="alternate" hreflang="tr" href="https://shadowcolonygame.com/tr/">
+<link rel="alternate" hreflang="de" href="https://shadowcolonygame.com/de/">
+<link rel="alternate" hreflang="fr" href="https://shadowcolonygame.com/fr/">
+<link rel="alternate" hreflang="ja" href="https://shadowcolonygame.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://shadowcolonygame.com/ko/">
+<link rel="alternate" hreflang="x-default" href="https://shadowcolonygame.com/en/">
+<link rel="icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .giris { position:relative; min-height:88vh; display:flex; align-items:flex-end; background:linear-gradient(180deg,rgba(14,19,27,.15) 0%,rgba(14,19,27,.55) 55%,var(--gece) 100%), url("../img/s/S3b.jpg") center/cover no-repeat; }
+  .giris .kap { padding-bottom:64px; }
+  .giris h1 { font-size:clamp(3rem,10vw,6.5rem); color:var(--turuncu); margin:0; text-shadow:0 4px 20px rgba(0,0,0,.7); }
+  .giris .slogan { font-size:clamp(1.2rem,3vw,1.7rem); margin:6px 0 26px; text-shadow:0 2px 10px rgba(0,0,0,.8); }
+  .video { border-radius:14px; overflow:hidden; border:1px solid var(--cizgi); box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  .video video { width:100%; display:block; background:#000; }
+  .hikaye { display:grid; gap:22px; }
+  .sahne2 { display:grid; grid-template-columns:1.2fr 1fr; gap:24px; align-items:center; background:var(--panel); border:1px solid var(--cizgi); border-radius:14px; overflow:hidden; }
+  .sahne2:nth-child(even) { grid-template-columns:1fr 1.2fr; }
+  .sahne2:nth-child(even) img { order:2; }
+  .sahne2 img { width:100%; height:100%; object-fit:cover; aspect-ratio:16/9; }
+  .sahne2 .metin { padding:22px 26px; }
+  .sahne2 h3 { font-size:1.7rem; margin:0 0 6px; }
+  .sahne2 p { margin:0; color:var(--soluk); font-size:1.05rem; }
+  @media (max-width:760px) { .sahne2, .sahne2:nth-child(even) { grid-template-columns:1fr; } .sahne2:nth-child(even) img { order:0; } }
+  .ozellikler { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; }
+  .ozellik { background:var(--panel); border:1px solid var(--cizgi); border-radius:14px; overflow:hidden; }
+  .ozellik img { aspect-ratio:16/9; object-fit:cover; width:100%; }
+  .ozellik div { padding:16px 18px 20px; }
+  .ozellik h3 { margin:0 0 6px; font-size:1.45rem; color:var(--turuncu); }
+  .ozellik p { margin:0; color:var(--soluk); }
+  .bolgeler { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+  .bolge { background:var(--panel); border:1px solid var(--cizgi); border-left:4px solid var(--turuncu); border-radius:10px; padding:16px 18px; }
+  .bolge h3 { margin:0 0 4px; font-size:1.4rem; }
+  .bolge p { margin:0; color:var(--soluk); font-size:.98rem; }
+  .bolge .zor { font-family:"Barlow Condensed"; color:var(--kizil); font-weight:800; letter-spacing:.1em; }
+  .galeri { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
+  .galeri a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--cizgi); }
+  .galeri img { aspect-ratio:16/9; object-fit:cover; width:100%; transition:transform .25s; }
+  .galeri a:hover img { transform:scale(1.04); }
+  .sss { display:grid; gap:10px; max-width:820px; }
+  details { background:var(--panel); border:1px solid var(--cizgi); border-radius:10px; padding:14px 18px; }
+  summary { cursor:pointer; font-weight:600; font-size:1.05rem; }
+  details p { margin:10px 0 0; color:var(--soluk); }
+  .rehber-cagri { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; background:var(--panel); border:1px solid var(--cizgi); border-radius:14px; padding:26px 28px; }
+  .rehber-cagri h3 { margin:0 0 4px; font-size:1.8rem; color:var(--turuncu); }
+  .rehber-cagri p { margin:0; color:var(--soluk); }
+  .son { text-align:center; padding:80px 0; background:linear-gradient(180deg,var(--gece),rgba(14,19,27,.6)), url("../img/s/G1_yorunge.jpg") center/cover; }
+  .son h2 { font-size:clamp(2.2rem,6vw,3.6rem); }
+  .son .dugmeler { justify-content:center; }
+</style>
+</head>
+<body>
+<nav class="ust"><div class="kap">
+  <a class="logo" href="../en/"><img src="../img/icon.png" alt="">SHADOW COLONY</a>
+  <div class="bag">
+    <a class="gizle" href="../en/#fragman">Trailer</a>
+    <a class="gizle" href="../en/#ozellikler">Features</a>
+    <a class="gizle" href="../en/guide/">Guide</a>
+    <a class="gizle" href="../press/">Press</a>
+    <select class="dil" aria-label="Language" onchange="try{localStorage.setItem('dil',this.options[this.selectedIndex].dataset.kod)}catch(e){};location.href=this.value"><option data-kod="en" value="../en/" selected>English</option><option data-kod="tr" value="../tr/">Türkçe</option><option data-kod="de" value="../de/">Deutsch</option><option data-kod="fr" value="../fr/">Français</option><option data-kod="ja" value="../ja/">日本語</option><option data-kod="ko" value="../ko/">한국어</option></select>
+  </div>
+</div></nav>
+
+<header class="giris"><div class="kap">
+  <h1>SHADOW COLONY</h1>
+  <p class="slogan">Live in the dark. Get back before dawn.</p>
+  <div class="dugmeler">
+    <a class="dugme ana" href="#fragman">▶ WATCH THE TRAILER</a>
+    <a class="dugme ikincil" href="guide/">GAME GUIDE</a>
+  </div>
+  <div class="rozetler"><span class="rozet">Free to play</span><span class="rozet">No pay-to-win</span><span class="rozet">Plays offline</span><span class="rozet">6 languages</span></div>
+</div></header>
+
+<section id="fragman"><div class="kap">
+  <h2>Trailer</h2>
+  <p class="alt">The sun turned deadly. This is how the survivors live.</p>
+  <div class="video"><video controls preload="metadata" poster="../video/kapak.jpg" playsinline><source src="../video/fragman_en.mp4" type="video/mp4"></video></div>
+</div></section>
+
+<section id="hikaye"><div class="kap">
+  <h2>The story</h2>
+  <p class="alt">Three weeks was all it took.</p>
+  <div class="hikaye">
+    <div class="sahne2"><img src="../img/s/S1_felaket.jpg" alt="" loading="lazy"><div class="metin"><h3>One morning, the sun changed</h3><p>The ozone layer tore open in three weeks. Daylight became a killer, and the cities emptied.</p></div></div>
+    <div class="sahne2"><img src="../img/s/S2_inis.jpg" alt="" loading="lazy"><div class="metin"><h3>The survivors went underground</h3><p>Metro tunnels and mine shafts became shelters. You lead one of them.</p></div></div>
+    <div class="sahne2"><img src="../img/s/S3b.jpg" alt="" loading="lazy"><div class="metin"><h3>Those left in the light didn't die</h3><p>They changed. Now they roam the surface at night, and they hear everything.</p></div></div>
+    <div class="sahne2"><img src="../img/s/G1_yorunge.jpg" alt="" loading="lazy"><div class="metin"><h3>It was them</h3><p>Ships in orbit turned the sun into a weapon. At dawn they drop their robots to claim the surface.</p></div></div>
+    <div class="sahne2"><img src="../img/s/S6b.jpg" alt="" loading="lazy"><div class="metin"><h3>The last shuttle</h3><p>The robots sealed a colony shuttle at the Spaceport. Repair it, launch it and lead your people to a new world.</p></div></div>
+  </div>
+</div></section>
+
+<section id="ozellikler"><div class="kap">
+  <h2>What you'll do</h2>
+  <p class="alt">Greed by night, home by dawn.</p>
+  <div class="ozellikler">
+    <div class="ozellik"><img src="../img/g/ekran_01_o_yagma.jpg" alt="" loading="lazy"><div><h3>Night raids</h3><p>Go up after dark, loot crates and buildings, and race back to the elevator before sunrise burns you.</p></div></div>
+    <div class="ozellik"><img src="../img/g/ekran_02_o_nadir.jpg" alt="" loading="lazy"><div><h3>Legendary loot</h3><p>Rare crates, legendary weapons, gear and blueprints. Every night is a gamble between greed and fear.</p></div></div>
+    <div class="ozellik"><img src="../img/s/S5_robot.jpg" alt="" loading="lazy"><div><h3>Mutants and robots</h3><p>Fight with guns, grenades, EMP and smoke, or slip through the shadows. A squad of soldiers can join you.</p></div></div>
+    <div class="ozellik"><img src="../img/s/S7_yasam.jpg" alt="" loading="lazy"><div><h3>Underground colony</h3><p>Dig a three-floor shelter for up to 200 people: generators, water, greenhouses, barns, labs, barracks.</p></div></div>
+    <div class="ozellik"><img src="../img/s/S8_aile.jpg" alt="" loading="lazy"><div><h3>Families and choices</h3><p>Children grow up, elders age, crises come. Every choice has a price.</p></div></div>
+    <div class="ozellik"><img src="../img/s/S9_kusatma.jpg" alt="" loading="lazy"><div><h3>Defend the shelter</h3><p>When the horde comes, your guards hold the entrance and reinforcements run from the barracks.</p></div></div>
+  </div>
+</div></section>
+
+<section id="bolgeler"><div class="kap">
+  <h2>Four regions</h2>
+  <p class="alt">Each one deadlier, and richer, than the last.</p>
+  <div class="bolgeler">
+    <div class="bolge"><span class="zor">I</span><h3>Ruins</h3><p>A suburb sinking into desert sand. Every colony starts here.</p></div>
+    <div class="bolge"><span class="zor">II</span><h3>Abandoned City</h3><p>Shopfronts and dead neon: the mutants' city.</p></div>
+    <div class="bolge"><span class="zor">III</span><h3>Military Base</h3><p>Sandbags, watchtowers and robot patrols.</p></div>
+    <div class="bolge"><span class="zor">IV</span><h3>Spaceport</h3><p>Rusted docks, sealed hangars and the last shuttle.</p></div>
+  </div>
+</div></section>
+
+<section id="rehber"><div class="kap">
+  <div class="rehber-cagri"><div><h3>Official game guide</h3><p>Raids, enemies, weapons, rooms, colony management, defense and the New World: every system explained in detail.</p></div><a class="dugme ana" href="guide/">GAME GUIDE</a></div>
+</div></section>
+
+<section id="galeri"><div class="kap">
+  <h2>Gallery</h2>
+  <p class="alt">In-game screenshots.</p>
+  <div class="galeri"><a href="../img/g/ekran_01_o_yagma.jpg"><img src="../img/g/ekran_01_o_yagma.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_02_o_nadir.jpg"><img src="../img/g/ekran_02_o_nadir.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_03_o_envanter.jpg"><img src="../img/g/ekran_03_o_envanter.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_04_o_ekip.jpg"><img src="../img/g/ekran_04_o_ekip.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_05_o_kat0.jpg"><img src="../img/g/ekran_05_o_kat0.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_06_o_karar.jpg"><img src="../img/g/ekran_06_o_karar.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_07_o_yetenek.jpg"><img src="../img/g/ekran_07_o_yetenek.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_08_o_patron.jpg"><img src="../img/g/ekran_08_o_patron.jpg" alt="" loading="lazy"></a></div>
+</div></section>
+
+<section id="sss"><div class="kap">
+  <h2>FAQ</h2>
+  <div class="sss">
+    <details><summary>Which platforms?</summary><p>Android first (Google Play). iOS and PC are planned.</p></details>
+    <details><summary>Is it free?</summary><p>Yes, it's free to play. Nothing in the game sells power: weapons and gear are only found on the surface.</p></details>
+    <details><summary>Do I need an internet connection?</summary><p>No. The game plays fully offline; your saves stay on your device.</p></details>
+    <details><summary>Which languages?</summary><p>English, Türkçe, Deutsch, Français, 日本語 and 한국어.</p></details>
+  </div>
+</div></section>
+
+<section class="son" id="oyna"><div class="kap">
+  <h2>The night is short.</h2>
+  <p class="alt">Be among the first to play: join the closed test on Google Play.</p>
+  <div class="dugmeler"><a class="dugme ana" href="mailto:support@shadowcolonygame.com?subject=Shadow%20Colony">JOIN THE TEST</a></div>
+</div></section>
+
+<footer class="alt-bilgi"><div class="kap">
+  <div><a href="../en/">Home</a><a href="../en/guide/">Guide</a><a href="../press/">Press</a><a href="../privacy/">Privacy</a></div>
+  <div>Support: <a href="mailto:support@shadowcolonygame.com">support@shadowcolonygame.com</a> · © 2026 Shadow Colony · Trailer music: "Homecoming"</div>
+</div></footer>
+</body>
+</html>

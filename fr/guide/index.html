@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide du jeu — Shadow Colony</title>
+<meta name="description" content="Le guide officiel de Shadow Colony : raids nocturnes, ennemis, armes, salles de l'abri, gestion de la colonie, défense, progression et Nouveau monde.">
+<meta property="og:title" content="Shadow Colony — Guide du jeu">
+<meta property="og:image" content="https://shadowcolonygame.com/img/hero.png">
+<link rel="alternate" hreflang="en" href="https://shadowcolonygame.com/en/guide/">
+<link rel="alternate" hreflang="tr" href="https://shadowcolonygame.com/tr/guide/">
+<link rel="alternate" hreflang="de" href="https://shadowcolonygame.com/de/guide/">
+<link rel="alternate" hreflang="fr" href="https://shadowcolonygame.com/fr/guide/">
+<link rel="alternate" hreflang="ja" href="https://shadowcolonygame.com/ja/guide/">
+<link rel="alternate" hreflang="ko" href="https://shadowcolonygame.com/ko/guide/">
+<link rel="alternate" hreflang="x-default" href="https://shadowcolonygame.com/en/guide/">
+<link rel="icon" href="../../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css">
+<style>.rehber-ust { background:linear-gradient(180deg,rgba(14,19,27,.2),var(--gece)), url("../../img/s/S7_yasam.jpg") center/cover; }</style>
+</head>
+<body>
+<nav class="ust"><div class="kap">
+  <a class="logo" href="../../fr/"><img src="../../img/icon.png" alt="">SHADOW COLONY</a>
+  <div class="bag">
+    <a class="gizle" href="../../fr/#fragman">Bande-annonce</a>
+    <a class="gizle" href="../../fr/#ozellikler">Fonctionnalités</a>
+    <a class="gizle aktif" href="../../fr/guide/">Guide</a>
+    <a class="gizle" href="../../press/">Presse</a>
+    <select class="dil" aria-label="Language" onchange="try{localStorage.setItem('dil',this.options[this.selectedIndex].dataset.kod)}catch(e){};location.href=this.value"><option data-kod="en" value="../../en/guide/">English</option><option data-kod="tr" value="../../tr/guide/">Türkçe</option><option data-kod="de" value="../../de/guide/">Deutsch</option><option data-kod="fr" value="../../fr/guide/" selected>Français</option><option data-kod="ja" value="../../ja/guide/">日本語</option><option data-kod="ko" value="../../ko/guide/">한국어</option></select>
+  </div>
+</div></nav>
+<header class="rehber-ust"><div class="kap">
+  <h1>GUIDE DU JEU</h1>
+  <p>Remonte la nuit, rentre avant l'aube, bâtis une colonie sous terre. Tous les systèmes de Shadow Colony, de la première nuit au Nouveau monde.</p>
+</div></header>
+<div class="rehber">
+<aside>
+  <h4>Sommaire</h4>
+  <a href="#temel">1. La boucle de jeu</a>
+  <a href="#ilk-gece">2. La première nuit</a>
+  <a href="#baskin">3. Raids nocturnes</a>
+  <a class="alt-baslik" href="#bilet">Tickets et patrouilles</a>
+  <a class="alt-baslik" href="#safak">L'aube et le soleil</a>
+  <a class="alt-baslik" href="#canta">Sac et évanouissement</a>
+  <a class="alt-baslik" href="#harita">Carte et brouillard</a>
+  <a class="alt-baslik" href="#yagma">Caisses, bâtiments, four</a>
+  <a class="alt-baslik" href="#gece-kosullari">Conditions nocturnes</a>
+  <a href="#bolgeler">4. Régions</a>
+  <a href="#dusmanlar">5. Ennemis</a>
+  <a href="#silahlar">6. Armes et équipement</a>
+  <a class="alt-baslik" href="#sarf">Consommables</a>
+  <a href="#siginak">7. L'abri et ses salles</a>
+  <a class="alt-baslik" href="#kaynaklar">Ressources</a>
+  <a class="alt-baslik" href="#besin">Chaîne alimentaire</a>
+  <a class="alt-baslik" href="#yasam">Survie</a>
+  <a href="#halk">8. Habitants et gestion</a>
+  <a class="alt-baslik" href="#aileler">Familles et générations</a>
+  <a class="alt-baslik" href="#kararlar">Crises et décisions</a>
+  <a class="alt-baslik" href="#mevsimler">Saisons</a>
+  <a href="#savunma">9. Défense de l'abri</a>
+  <a href="#uretim">10. Fabrication et plans</a>
+  <a href="#ilerleme">11. Progression</a>
+  <a class="alt-baslik" href="#lider">Compétences du chef</a>
+  <a class="alt-baslik" href="#projeler">Mégaprojets</a>
+  <a class="alt-baslik" href="#final">Navette et Nouveau monde</a>
+  <a href="#ipuclari">12. Conseils d'expert</a>
+</aside>
+<main>
+<h2 id="temel">1. La boucle de jeu</h2>
+<p>Un matin, le soleil a changé : la couche d'ozone s'est déchirée en trois semaines et la lumière du jour est devenue mortelle. Les survivants se sont réfugiés dans les tunnels de métro et les galeries de mine. Tu es le <strong>chef</strong> de l'un de ces abris.</p>
+<p>Le jeu repose sur deux boucles imbriquées :</p>
+<div class="kutular">
+  <div class="kutu"><h4>La nuit : la surface</h4><p>Monte par l'ascenseur, pille caisses et bâtiments, combats ou fuis les ennemis, et reviens à l'ascenseur <strong>avant l'aube</strong>.</p></div>
+  <div class="kutu"><h4>Le jour : sous terre</h4><p>Avec ton butin, creuse des salles, mets tes habitants au travail, fabrique, recherche, agrandis la colonie et prépare-toi aux attaques.</p></div>
+</div>
+<p>Les ressources continuent de s'accumuler quand tu es à la surface, et même quand le jeu est fermé. Chaque raid fait grandir la colonie, et une colonie plus forte te prépare à des raids plus durs.</p>
+<img class="sahne" src="../../img/s/S2_inis.jpg" alt="Descente sous terre en ascenseur" loading="lazy">
+
+<h2 id="ilk-gece">2. La première nuit, pas à pas</h2>
+<ol class="adimlar">
+  <li><strong>Monte :</strong> le bouton <strong>VERS LA SURFACE</strong> de l'abri dépense un ticket et te fait monter par l'ascenseur.</li>
+  <li><strong>Va vers les caisses :</strong> approche-toi des caisses lumineuses ; le pillage démarre tout seul. Les cases de sac remplies s'affichent en haut à gauche.</li>
+  <li><strong>Surveille l'horloge :</strong> le compteur en haut indique le temps avant l'aube. Rentre avant qu'il n'arrive à zéro.</li>
+  <li><strong>Retourne à l'ascenseur :</strong> si tu reviens vivant, tout le sac va à la colonie et l'équipement trouvé part à l'entrepôt.</li>
+  <li><strong>Dépense à l'abri :</strong> creuse une nouvelle salle avec de la ferraille et mets les habitants inactifs au travail.</li>
+</ol>
+<div class="not ipucu"><b>Tes 5 premiers raids sont sans perte :</b> même si tu t'évanouis, tu gardes ton butin. Profites-en pour découvrir le jeu sans pression.</div>
+
+<h2 id="baskin">3. Raids nocturnes</h2>
+<img class="sahne" src="../../img/g/ekran_01_o_yagma.jpg" alt="Raid nocturne" loading="lazy">
+<h3 id="bilet">Tickets et patrouilles courtes</h3>
+<ul>
+  <li>Chaque sortie à la surface coûte <strong>1 ticket</strong>. Les tickets se rechargent avec le temps, <strong>4 au maximum</strong>.</li>
+  <li>La <strong>Salle de préparation</strong> recharge les tickets plus vite. Les quêtes et objectifs en rapportent aussi.</li>
+  <li>Plus de tickets ? Pars en <strong>patrouille courte</strong> : sans ticket, mais butin divisé par deux et sans caisse rare.</li>
+</ul>
+<h3 id="safak">L'aube et le soleil</h3>
+<ul>
+  <li>Quand le soleil se lève, tout ce qui reste à la lumière brûle : ta santé baisse seconde après seconde.</li>
+  <li>Reste dans <strong>l'ombre des bâtiments</strong> et cours vers l'ascenseur d'ombre en ombre. Rentrer à l'aube donne un <strong>butin bonus</strong>.</li>
+  <li>Les couvre-chefs (lunettes de soudeur, voile solaire, casque thermique), la <strong>Salle du bouclier</strong> et le <strong>Bouclier solaire</strong> fabriqué au Laboratoire réduisent les dégâts du soleil.</li>
+  <li>Le soleil brûle aussi les mutants ; ils fuient dans l'ombre à l'aube. Les robots, eux, y sont insensibles.</li>
+</ul>
+<h3 id="canta">Sac, Poche sécurisée et évanouissement</h3>
+<ul>
+  <li>Le butin va dans les cases du sac. Des sacs plus grands (sac à dos, sac militaire) et la compétence <strong>Large dos</strong> ajoutent des cases.</li>
+  <li><strong>Poche sécurisée</strong> : son contenu n'est jamais perdu, même si tu t'évanouis. Mets-y tes matériaux les plus précieux.</li>
+  <li>Si ta santé tombe à zéro, tu <strong>t'évanouis</strong> : tu perds <strong>la moitié</strong> du sac et <strong>tous les objets</strong> trouvés cette nuit-là. Le chef se repose ensuite un moment ; l'Infirmerie raccourcit ce repos.</li>
+</ul>
+<h3 id="harita">Carte, brouillard et horde</h3>
+<ul>
+  <li>La carte est en haut à droite. Les zones que tu traverses se dévoilent ; le reste demeure sous le <strong>brouillard</strong>, et tu n'y vois pas les ennemis.</li>
+  <li>À certains moments de la nuit, une <strong>horde</strong> surgit du bord de la carte et marche vers toi. À l'alerte, file vers l'ombre, un bâtiment ou l'ascenseur.</li>
+  <li><strong>Véhicule</strong> : garé quelque part sur une route. <strong>RÉPARER</strong> au capot, <strong>FAIRE LE PLEIN</strong> à l'arrière, <strong>MONTER</strong> par la portière. Rapide et il écrase les mutants, mais le bruit du moteur attire les ennemis.</li>
+</ul>
+<h3 id="yagma">Caisses, bâtiments, four de fonte, survivants</h3>
+<div class="kutular">
+  <div class="kutu"><h4>Caisse rare</h4><p>Un coffre lourd à la lueur dorée. Pièces, plans et bon équipement ; souvent gardée.</p></div>
+  <div class="kutu"><h4>Bâtiment accessible</h4><p>Hôpital, école, usine… À l'intérieur, des casiers et une salle verrouillée ouverte par une <strong>carte magnétique</strong>, avec le meilleur butin.</p></div>
+  <div class="kutu"><h4>Four de fonte improvisé</h4><p>Fond la ferraille du sac (3 ferrailles → 1 lingot). La fonte fait du bruit et de la lumière ; les ennemis proches arrivent.</p></div>
+  <div class="kutu"><h4>Survivant</h4><p>Quelqu'un est pris au piège. Bats son geôlier, libère-le et revenez ensemble à l'ascenseur : il rejoint ton peuple.</p></div>
+</div>
+<h3 id="gece-kosullari">Conditions nocturnes</h3>
+<p>Après quelques raids, environ une nuit sur deux arrive avec une condition spéciale. Elle s'affiche à l'avance dans le panneau d'expédition :</p>
+<table class="tablo"><tr><th>Condition</th><th>Effet</th></tr>
+<tr><td>Nuit de brouillard</td><td>Vision réduite, brume partout ; les mutants te repèrent 30 % plus tard · butin +15 %</td></tr>
+<tr><td>Pleine lune</td><td>Mutants 15 % plus rapides et voient plus loin · +1 caisse rare</td></tr>
+<tr><td>Nuit calme</td><td>30 % d'ennemis en moins · butin −15 %</td></tr>
+<tr><td>Nuit pourpre</td><td>30 % d'ennemis en plus · butin +40 %</td></tr>
+</table>
+<p>Les <strong>tempêtes</strong> hebdomadaires et les <strong>événements nocturnes</strong> (par ex. Nuit dorée, Lune de sang) changent aussi les règles. Chaque région a sa <strong>nuit du boss</strong>.</p>
+
+<h2 id="bolgeler">4. Régions</h2>
+<p>Quatre régions se débloquent dans l'ordre. Au bord de chacune, une <strong>porte de région</strong> mène à la suivante : une porte jaune se répare avec un kit fabriqué au Laboratoire, une porte verte se franchit.</p>
+<table class="tablo"><tr><th>Région</th><th>Identité</th><th>Boss</th></tr>
+<tr><td>I · Ruines</td><td>Une banlieue qui s'enfonce dans le sable du désert. Toute colonie commence ici.</td><td>Géant de cendre</td></tr>
+<tr><td>II · Ville abandonnée</td><td>Vitrines et néons éteints : la ville des mutants.</td><td>Géant de lave</td></tr>
+<tr><td>III · Base militaire</td><td>Sacs de sable, miradors, patrouilles de robots. Électronique et cellules d'énergie s'y trouvent.</td><td>Robot de guerre</td></tr>
+<tr><td>IV · Spatioport</td><td>Quais rouillés, hangars scellés et la dernière navette coloniale.</td><td>Gardien orbital</td></tr>
+</table>
+<p>Vaincre le boss nettoie la région et rapporte de l'équipement rare. Termine le Spatioport sans t'évanouir pour débloquer les <strong>paliers de cauchemar</strong> (jusqu'à 10) : ennemis plus forts, butin plus riche.</p>
+
+<h2 id="dusmanlar">5. Ennemis</h2>
+<img class="sahne" src="../../img/s/S3b.jpg" alt="Mutants" loading="lazy">
+<h3>Les mutants : ceux restés à la lumière qui ne sont pas morts</h3>
+<table class="tablo"><tr><th>Ennemi</th><th>Comportement</th><th>Comment s'en sortir</th></tr>
+<tr><td>Mutant brûlé</td><td>Rôde la nuit et suit le bruit ; fuit dans l'ombre à l'aube.</td><td>Avance en silence ; attire-le ailleurs avec une fusée.</td></tr>
+<tr><td>Coureur</td><td>Le plus rapide, mais fragile.</td><td>Impossible de le distancer : attends à un angle et frappe quand il approche.</td></tr>
+<tr><td>Mutant char</td><td>Énorme, lent, trois fois plus résistant ; frappe fort s'il t'attrape.</td><td>Facile à fuir, coûteux à tuer : pense à tes munitions.</td></tr>
+<tr><td>Cracheur</td><td>Crache de l'acide à distance et recule si tu approches.</td><td>Mets-toi derrière un mur ou fonce dessus : il est faible au corps à corps.</td></tr>
+<tr><td>Éclateur</td><td>Plein de gaz ; explose quand il t'atteint ou meurt.</td><td>Tire de loin et fais-le exploser près d'autres ennemis.</td></tr>
+</table>
+<h3>Les robots : les soldats des vaisseaux</h3>
+<table class="tablo"><tr><th>Ennemi</th><th>Comportement</th><th>Comment s'en sortir</th></tr>
+<tr><td>Robot guetteur</td><td>Vole et n'attaque pas, mais donne l'alerte s'il te voit : tous les ennemis proches arrivent.</td><td>Abats-le avant d'entrer dans son champ de vision, ou contourne-le.</td></tr>
+<tr><td>Robot de garde</td><td>Garde la Base et le Spatioport. Le cône devant lui est son champ de vision.</td><td>Quand la ligne rouge s'allume, un laser arrive : écarte-toi. Neutralise-le à l'IEM.</td></tr>
+<tr><td>Robot de l'aube</td><td>Insensible au soleil ; débarque au bord de la carte à l'aube.</td><td>Ignore les fusées. Lâche de l'électronique.</td></tr>
+</table>
+<div class="not">Les <b>fusées de signalisation</b> attirent les mutants vers la lumière, pas les robots. L'<b>IEM</b> neutralise seulement les robots et n'a aucun effet sur les mutants.</div>
+
+<h2 id="silahlar">6. Armes et équipement</h2>
+<img class="sahne" src="../../img/g/ekran_03_o_envanter.jpg" alt="Inventaire et équipement" loading="lazy">
+<p>Il y a quatre emplacements d'équipement : <strong>arme</strong>, <strong>couvre-chef</strong> (contre le soleil), <strong>sac</strong> (cases) et <strong>talisman</strong> (porte-bonheur : butin · médaillon cœur : santé · plume du vent : fuite).</p>
+<table class="tablo"><tr><th>Arme</th><th>Type</th><th>Note</th></tr>
+<tr><td>Pied-de-biche, Machette, Masse</td><td>Corps à corps</td><td>Ne consomme pas de munitions.</td></tr>
+<tr><td>Pistolet</td><td>Arme à feu</td><td>Balles de pistolet ; ton arme de départ.</td></tr>
+<tr><td>Fusil à pompe</td><td>Arme à feu</td><td>Trois plombs par tir ; dévastateur de près.</td></tr>
+<tr><td>Arbalète</td><td>Arme à feu</td><td>Silencieuse, longue portée : ne réveille pas les ennemis.</td></tr>
+<tr><td>Fusil de chasse</td><td>Arme à feu</td><td>Longue portée, un tir puissant ; munitions rares.</td></tr>
+<tr><td>Mitrailleuse</td><td>Arme à feu</td><td>Tir en rafale ; dévore les munitions.</td></tr>
+</table>
+<ul>
+  <li><strong>Rareté :</strong> Commun · Rare · Légendaire. La rareté et le niveau d'amélioration augmentent les dégâts et la durabilité.</li>
+  <li><strong>Munitions :</strong> chaque arme à feu utilise les siennes ; à court, elle frappe avec la crosse.</li>
+  <li><strong>Durabilité :</strong> baisse à chaque attaque ; à zéro, l'arme se brise. Répare-la au Laboratoire.</li>
+  <li>Rentre vivant et l'équipement trouvé va à l'entrepôt ; évanouis-toi et il est perdu.</li>
+</ul>
+<h3 id="sarf">Consommables (emplacements rapides)</h3>
+<p>Deux emplacements autour du bouton ATTAQUER contiennent des consommables ; touche » pour changer d'objet.</p>
+<table class="tablo"><tr><th>Objet</th><th>Effet</th></tr>
+<tr><td>Fusée de signalisation</td><td>Attire les mutants vers la lumière (les robots ne s'y laissent pas prendre).</td></tr>
+<tr><td>Grenade</td><td>Explosion retardée, dégâts de zone ; le bruit réveille les ennemis éloignés.</td></tr>
+<tr><td>Grenade IEM</td><td>Neutralise les robots 6 secondes : ni tir, ni déplacement, ni alerte.</td></tr>
+<tr><td>Grenade fumigène</td><td>Les ennemis te perdent de vue 5 secondes : idéal pour fuir.</td></tr>
+<tr><td>Seringue</td><td>+40 santé immédiatement.</td></tr>
+<tr><td>Trousse de premiers secours</td><td>+100 santé immédiatement. Difficile à fabriquer : Laboratoire niv. 3 et Infirmerie requis.</td></tr>
+</table>
+<p>Avant un raid, tu peux choisir un <strong>repas de raid</strong> parmi tes produits de ferme (soupe, lait et œufs, ragoût de viande, fruits) : bonus de santé, de dégâts ou de vitesse.</p>
+
+<h2 id="siginak">7. L'abri et ses salles</h2>
+<img class="sahne" src="../../img/s/S7_yasam.jpg" alt="Colonie souterraine" loading="lazy">
+<p>L'abri compte <strong>3 niveaux</strong> (144 salles au total) et une limite de <strong>200</strong> habitants. Marche contre une paroi de terre pour creuser une salle ; des salles voisines du même type fusionnent en un hall. Chaque salle s'améliore, et <strong>une salle sans travailleurs ne produit rien</strong>.</p>
+<table class="tablo"><tr><th>Salle</th><th>Rôle</th></tr>
+<tr><td>Générateur</td><td>Produit de l'énergie. Sans énergie, la production s'arrête.</td></tr>
+<tr><td>Panneau solaire</td><td>Énergie gratuite le jour, rien la nuit.</td></tr>
+<tr><td>Batterie</td><td>Augmente la limite d'énergie ; garde l'énergie du jour pour la nuit.</td></tr>
+<tr><td>Purificateur d'eau</td><td>Produit de l'eau potable.</td></tr>
+<tr><td>Réservoir d'eau</td><td>Augmente la limite d'eau.</td></tr>
+<tr><td>Serre</td><td>Légumes ; blé et fruits (débloqués avec des graines).</td></tr>
+<tr><td>Étable</td><td>Vaches et chèvres : lait et viande. Boit de l'eau, nourrit plus que la Serre.</td></tr>
+<tr><td>Poulailler</td><td>Poules : œufs et viande. Boit peu d'eau.</td></tr>
+<tr><td>Cantine</td><td>Les cuisiniers réduisent la consommation ; avec les quatre sources de nourriture, repas équilibrés et moral.</td></tr>
+<tr><td>Chambre froide</td><td>Augmente la limite de nourriture et ralentit la péremption.</td></tr>
+<tr><td>Entrepôt principal</td><td>Ajoute des cases à la grille de stockage et de la capacité de ferraille.</td></tr>
+<tr><td>Dortoir</td><td>Ajoute des lits : de la place pour grandir.</td></tr>
+<tr><td>Ventilation</td><td>De l'air pour 12 personnes par niveau.</td></tr>
+<tr><td>Climatisation</td><td>Maintient l'abri entre 16 et 26 °C.</td></tr>
+<tr><td>Infirmerie</td><td>Les blessés guérissent plus vite ; raccourcit le repos du chef évanoui.</td></tr>
+<tr><td>École</td><td>Forme les habitants et augmente la maîtrise (★5 uniquement à l'École).</td></tr>
+<tr><td>Laboratoire</td><td>Toute la fabrication : munitions, consommables, équipement, réparation, amélioration, recherche.</td></tr>
+<tr><td>Caserne</td><td>Soldats : tiennent l'entrée pendant les attaques et t'accompagnent en raid.</td></tr>
+<tr><td>Salle du bouclier</td><td>Réduit les dégâts du soleil à la surface.</td></tr>
+<tr><td>Salle de préparation</td><td>Recharge les tickets plus vite.</td></tr>
+<tr><td>Radio</td><td>Capte les signaux de nouvelles régions et décode les journaux radio.</td></tr>
+</table>
+<h3 id="kaynaklar">Ressources</h3>
+<div class="kutular">
+  <div class="kutu"><h4>Eau · Nourriture · Énergie</h4><p>Le trio vital. Si l'un manque, le moral chute d'abord, puis la santé.</p></div>
+  <div class="kutu"><h4>Ferraille</h4><p>Creuser, améliorer, réparer. Vient de la surface et des expéditions.</p></div>
+  <div class="kutu"><h4>Pièces · Électronique</h4><p>Pièces des caisses rares, électronique des robots. Améliorations d'armes, portes, véhicule.</p></div>
+  <div class="kutu"><h4>Lingots · Carburant</h4><p>Les lingots sortent du four et servent à la fabrication. Le carburant alimente le véhicule et les générateurs.</p></div>
+  <div class="kutu"><h4>Cellule d'énergie</h4><p>La plus précieuse : caisses rares de la Base et du Spatioport, boss robot. Pour la porte du Spatioport et la navette.</p></div>
+  <div class="kutu"><h4>Cristaux · Tickets</h4><p>Les cristaux servent seulement à l'apparence et aux cosmétiques ; la puissance n'est jamais vendue. Les tickets sont ton droit de monter.</p></div>
+</div>
+<h3 id="besin">Chaîne alimentaire</h3>
+<ul>
+  <li>La <strong>Serre</strong> fait pousser légumes, blé ou fruits. Le blé nourrit les animaux (+20 %), les fruits remontent le moral.</li>
+  <li>Les troupeaux de l'<strong>Étable</strong> et du <strong>Poulailler</strong> se reproduisent tant qu'il y a eau, nourriture et un soigneur au travail. <strong>ABATTRE</strong> donne de la viande tout de suite ; caresse le chef de troupeau une fois par jour (+10 %).</li>
+  <li>Les récoltes s'accumulent dans la salle ; touche pour les ramasser. Les graines viennent de la surface vers l'entrepôt, et la Serre puise dans ce stock.</li>
+</ul>
+<img class="sahne" src="../../img/s/Y2_sera.jpg" alt="Serre" loading="lazy">
+<h3 id="yasam">Survie : air et température</h3>
+<ul>
+  <li>Le puits de l'ascenseur fournit de l'air à 10 personnes ; au-delà, il te faut la <strong>Ventilation</strong> (12 personnes par niveau).</li>
+  <li>Le jour, le soleil et les générateurs réchauffent l'abri ; la nuit, il refroidit. La <strong>Climatisation</strong> le maintient entre 16 et 26 °C.</li>
+  <li>Si les conditions se dégradent, le moral baisse d'abord, puis la production, et enfin la santé.</li>
+</ul>
+
+<h2 id="halk">8. Habitants et gestion de la colonie</h2>
+<p>Chaque colon a un nom, une personnalité et une <strong>maîtrise</strong> (★1–★5) propre à chaque métier. Un maître produit deux fois plus qu'un ★1. Rester dans le même métier fait gagner des étoiles (jusqu'à ★4) ; le ★5 exige l'École. Change quelqu'un de métier et il redevient débutant.</p>
+<ul>
+  <li><strong>Colonie › GESTION :</strong> fixe la priorité des secteurs (Désactivé / Basse / Normale / Élevée). Une ressource vitale qui manque passe automatiquement en <strong>URGENT</strong>. Tu peux aussi affecter une personne à une salle.</li>
+  <li><strong>Moral</strong> : dépend de la variété des repas, des conditions de vie, des événements et des décisions ; un moral bas fait baisser la production.</li>
+  <li><strong>Souhaits personnels</strong> : les colons demandent parfois quelque chose (un jouet, un souvenir, un livre…). Exauce-les pour gagner étoiles, moral et cristaux.</li>
+</ul>
+<h3 id="aileler">Familles et générations</h3>
+<img class="sahne" src="../../img/s/S8_aile.jpg" alt="Famille" loading="lazy">
+<ul>
+  <li>Les colons forment des couples et ont des enfants ; les enfants travaillent une fois grands.</li>
+  <li>Chacun vieillit d'un an par année de jeu ; la première génération prend de l'âge et les aînés deviennent moins productifs.</li>
+  <li>Une perte laisse un deuil ; le mur du souvenir garde la mémoire des disparus.</li>
+</ul>
+<h3 id="kararlar">Crises et décisions</h3>
+<p>Quand quelque chose arrive dans la colonie (famine, migrants à la porte, épidémie, effondrement du moral, suites d'une attaque), une carte de décision à deux choix apparaît. Avec la croissance viennent aussi les décisions de génération : les enfants doivent-ils travailler ou étudier, les aînés prendre leur retraite, comment préparer l'hiver ? <strong>Chaque choix a un prix</strong>, et son effet dure un moment.</p>
+<img class="sahne" src="../../img/g/ekran_06_o_karar.jpg" alt="Carte de décision" loading="lazy">
+<h3 id="mevsimler">Saisons</h3>
+<p>Chaque saison dure 8 jours de jeu, une année 32 jours. Aucun effet la première semaine, puis il s'intensifie progressivement.</p>
+<table class="tablo"><tr><th>Saison</th><th>Effet</th></tr>
+<tr><td>Printemps</td><td>Eau +15 %, nourriture +10 %</td></tr>
+<tr><td>Été</td><td>Eau −15 %, nourriture +10 %</td></tr>
+<tr><td>Automne</td><td>Nourriture +25 %, attaques de pillards plus fortes</td></tr>
+<tr><td>Hiver</td><td>Nourriture −20 %, hordes plus fortes, épidémies fréquentes ; le chauffage coûte ferraille ou énergie</td></tr>
+</table>
+
+<h2 id="savunma">9. Défense de l'abri</h2>
+<img class="sahne" src="../../img/s/S9_kusatma.jpg" alt="Siège" loading="lazy">
+<p>À mesure que la colonie grandit, l'abri est attaqué. Une alerte démarre, la sirène retentit et les assaillants descendent par l'ascenseur.</p>
+<table class="tablo"><tr><th>Attaque</th><th>Point faible</th></tr>
+<tr><td>Horde</td><td>Bute contre les murs : Mur de défense et Salle du bouclier.</td></tr>
+<tr><td>Pillards</td><td>Faibles face aux soldats ; les entrepôts pleins les attirent.</td></tr>
+<tr><td>Robots</td><td>Le radar et le Laboratoire les perturbent.</td></tr>
+</table>
+<ul>
+  <li><strong>Garde à l'entrée :</strong> les soldats accueillent d'abord les assaillants dans la salle d'entrée ; quand l'un tombe, un renfort arrive de la <strong>Caserne</strong>.</li>
+  <li><strong>SOLDATS AUTO :</strong> si ta défense est inférieure à l'attaque prévue, le jeu affecte automatiquement des soldats à la Caserne (désactivable).</li>
+  <li>Avec le bouton <strong>DÉFENDRE !</strong>, le chef se joint au combat ; chaque coup renforce la défense.</li>
+  <li>Si ta défense vaut le double de l'attaque, celle-ci est repoussée à la porte. Après plusieurs défaites d'affilée, les attaques se font plus rares.</li>
+</ul>
+
+<h2 id="uretim">10. Fabrication, plans et recherche</h2>
+<ul>
+  <li>Le <strong>Laboratoire</strong> répartit la fabrication en quatre onglets : <strong>ARMES · MUNITIONS · ÉQUIPEMENT · OUTILS &amp; FOURNITURES</strong>. De nouvelles recettes s'ouvrent à chaque niveau.</li>
+  <li><strong>Plans</strong> : la plupart des armes, équipements, munitions et consommables exigent d'abord un plan. Les plans tombent des caisses rares dans l'inventaire ; touche › <strong>APPRENDRE</strong>. Les kits et le Bouclier solaire n'en demandent pas.</li>
+  <li>La <strong>recherche</strong> débloque des améliorations permanentes (ex. récolte automatique). Les points de recherche s'accumulent au Laboratoire.</li>
+  <li>Une <strong>caravane</strong> passe de temps en temps : commerce dans la salle de l'ascenseur.</li>
+</ul>
+
+<h2 id="ilerleme">11. Progression</h2>
+<p>La <strong>barre de voyage</strong> de l'écran des quêtes montre le grand objectif : Ruines → Ville → Base → Spatioport → Navette → Finale → Nouveau monde. Quêtes quotidiennes et hebdomadaires, série de connexion sur 7 jours et succès te récompensent en chemin.</p>
+<h3 id="lider">Niveau et compétences du chef</h3>
+<p>Les raids font monter ton chef de niveau. Tous les 5 niveaux, 1 point de compétence ; 8 compétences à 3 rangs chacune. Impossible de tout prendre, alors choisis ton style ; la réinitialisation est gratuite.</p>
+<table class="tablo"><tr><th>Compétence</th><th>Effet (augmente par rang)</th></tr>
+<tr><td>Pas silencieux</td><td>Les mutants te repèrent seulement de plus près.</td></tr>
+<tr><td>Mains agiles</td><td>Les caisses s'ouvrent plus vite.</td></tr>
+<tr><td>Robuste</td><td>Plus de santé à la surface.</td></tr>
+<tr><td>Tireur d'élite</td><td>Plus de dégâts avec les armes.</td></tr>
+<tr><td>Coureur</td><td>Course plus rapide.</td></tr>
+<tr><td>Économe</td><td>Certains tirs ne consomment pas de munitions.</td></tr>
+<tr><td>Large dos</td><td>Ajoute des cases d'inventaire.</td></tr>
+<tr><td>Pilleur</td><td>Plus de butin dans les caisses.</td></tr>
+</table>
+<img class="sahne" src="../../img/g/ekran_07_o_yetenek.jpg" alt="Compétences du chef" loading="lazy">
+<h3 id="projeler">Mégaprojets</h3>
+<p>Colonie › PROJETS : transforme tes surplus en puissance permanente. Une seule étape avance à la fois et chacune dure plus longtemps ; après 5 étapes commencent les niveaux <strong>Maître</strong>.</p>
+<div class="kutular">
+  <div class="kutu"><h4>Château d'eau</h4><p>Plus d'eau, un plus grand réservoir.</p></div>
+  <div class="kutu"><h4>Réacteur à fusion</h4><p>Plus d'énergie pour toutes les salles.</p></div>
+  <div class="kutu"><h4>Dôme hydroponique</h4><p>Plus de nourriture, des habitants plus heureux.</p></div>
+  <div class="kutu"><h4>Mur de défense</h4><p>Contre les attaques, surtout les hordes.</p></div>
+  <div class="kutu"><h4>Réseau radar</h4><p>Voit venir les attaques et perturbe les robots.</p></div>
+</div>
+<h3 id="final">La navette, la nuit finale et le Nouveau monde</h3>
+<img class="sahne" src="../../img/s/S6b.jpg" alt="Navette coloniale" loading="lazy">
+<p>Les robots ont scellé la dernière <strong>navette coloniale</strong> au Spatioport et dispersé ses cellules de carburant dans tout le port. Rassemble les cellules d'énergie, répare la navette et lance-la lors de la <strong>nuit finale</strong> : les pionniers partent vers une planète habitable.</p>
+<p>Ensuite, tu peux émigrer avec ta colonie vers un <strong>Nouveau monde</strong> quand tu veux. Tout repart de zéro, mais les <strong>points d'Héritage</strong>, les cristaux, les robots, les apparences et les paliers de cauchemar te suivent. Les points d'Héritage achètent des avantages permanents ; chaque nouveau monde a ses propres règles.</p>
+
+<h2 id="ipuclari">12. Conseils d'expert</h2>
+<div class="not ipucu"><b>L'avidité a ses limites.</b> Sac plein ou compteur à moitié écoulé : pense au retour. S'évanouir coûte tous les objets de la nuit.</div>
+<div class="not ipucu"><b>Ne laisse jamais la Poche sécurisée vide.</b> Pièces, cellules d'énergie et électronique y vont en premier.</div>
+<div class="not ipucu"><b>D'abord l'air, l'eau et la nourriture.</b> N'oublie pas la Ventilation quand la population augmente : si l'air se dégrade, la production baisse en silence.</div>
+<div class="not ipucu"><b>Ne déplace pas tes maîtres.</b> Un travailleur ★4 changé de métier repart à ★1.</div>
+<div class="not ipucu"><b>Construis la Caserne tôt.</b> Les attaques grandissent avec la colonie ; les gardes de l'entrée sont ta première ligne de défense.</div>
+<div class="not ipucu"><b>L'arbalète est silencieuse.</b> La meilleure arme pour abattre robots guetteurs et hordes endormies sans rien réveiller.</div>
+<div class="not uyari"><b>Lis les ombres.</b> À l'aube, ce n'est pas le chemin le plus court qui te garde en vie, mais le plus ombragé.</div>
+</main>
+
+</div>
+<footer class="alt-bilgi"><div class="kap">
+  <div><a href="../../fr/">Accueil</a><a href="../../fr/guide/">Guide</a><a href="../../press/">Presse</a><a href="../../privacy/">Confidentialité</a></div>
+  <div>Support: <a href="mailto:support@shadowcolonygame.com">support@shadowcolonygame.com</a> · © 2026 Shadow Colony · Musique de la bande-annonce : « Homecoming »</div>
+</div></footer>
+<a class="yukari" href="#" aria-label="↑">↑</a>
+</body>
+</html>

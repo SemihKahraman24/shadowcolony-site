@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Colony — 闇に生きろ。夜明け前に戻れ。</title>
+<meta name="description" content="夜、太陽に焼かれた地上で略奪し、夜明け前に戻り、地下にコロニーを築く。Android向けサバイバル×コロニー経営ゲーム。">
+<meta property="og:title" content="Shadow Colony">
+<meta property="og:description" content="闇に生きろ。夜明け前に戻れ。">
+<meta property="og:image" content="https://shadowcolonygame.com/img/hero.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#12171F">
+<link rel="alternate" hreflang="en" href="https://shadowcolonygame.com/en/">
+<link rel="alternate" hreflang="tr" href="https://shadowcolonygame.com/tr/">
+<link rel="alternate" hreflang="de" href="https://shadowcolonygame.com/de/">
+<link rel="alternate" hreflang="fr" href="https://shadowcolonygame.com/fr/">
+<link rel="alternate" hreflang="ja" href="https://shadowcolonygame.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://shadowcolonygame.com/ko/">
+<link rel="alternate" hreflang="x-default" href="https://shadowcolonygame.com/en/">
+<link rel="icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .giris { position:relative; min-height:88vh; display:flex; align-items:flex-end; background:linear-gradient(180deg,rgba(14,19,27,.15) 0%,rgba(14,19,27,.55) 55%,var(--gece) 100%), url("../img/s/S3b.jpg") center/cover no-repeat; }
+  .giris .kap { padding-bottom:64px; }
+  .giris h1 { font-size:clamp(3rem,10vw,6.5rem); color:var(--turuncu); margin:0; text-shadow:0 4px 20px rgba(0,0,0,.7); }
+  .giris .slogan { font-size:clamp(1.2rem,3vw,1.7rem); margin:6px 0 26px; text-shadow:0 2px 10px rgba(0,0,0,.8); }
+  .video { border-radius:14px; overflow:hidden; border:1px solid var(--cizgi); box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  .video video { width:100%; display:block; background:#000; }
+  .hikaye { display:grid; gap:22px; }
+  .sahne2 { display:grid; grid-template-columns:1.2fr 1fr; gap:24px; align-items:center; background:var(--panel); border:1px solid var(--cizgi); border-radius:14px; overflow:hidden; }
+  .sahne2:nth-child(even) { grid-template-columns:1fr 1.2fr; }
+  .sahne2:nth-child(even) img { order:2; }
+  .sahne2 img { width:100%; height:100%; object-fit:cover; aspect-ratio:16/9; }
+  .sahne2 .metin { padding:22px 26px; }
+  .sahne2 h3 { font-size:1.7rem; margin:0 0 6px; }
+  .sahne2 p { margin:0; color:var(--soluk); font-size:1.05rem; }
+  @media (max-width:760px) { .sahne2, .sahne2:nth-child(even) { grid-template-columns:1fr; } .sahne2:nth-child(even) img { order:0; } }
+  .ozellikler { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; }
+  .ozellik { background:var(--panel); border:1px solid var(--cizgi); border-radius:14px; overflow:hidden; }
+  .ozellik img { aspect-ratio:16/9; object-fit:cover; width:100%; }
+  .ozellik div { padding:16px 18px 20px; }
+  .ozellik h3 { margin:0 0 6px; font-size:1.45rem; color:var(--turuncu); }
+  .ozellik p { margin:0; color:var(--soluk); }
+  .bolgeler { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+  .bolge { background:var(--panel); border:1px solid var(--cizgi); border-left:4px solid var(--turuncu); border-radius:10px; padding:16px 18px; }
+  .bolge h3 { margin:0 0 4px; font-size:1.4rem; }
+  .bolge p { margin:0; color:var(--soluk); font-size:.98rem; }
+  .bolge .zor { font-family:"Barlow Condensed"; color:var(--kizil); font-weight:800; letter-spacing:.1em; }
+  .galeri { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
+  .galeri a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--cizgi); }
+  .galeri img { aspect-ratio:16/9; object-fit:cover; width:100%; transition:transform .25s; }
+  .galeri a:hover img { transform:scale(1.04); }
+  .sss { display:grid; gap:10px; max-width:820px; }
+  details { background:var(--panel); border:1px solid var(--cizgi); border-radius:10px; padding:14px 18px; }
+  summary { cursor:pointer; font-weight:600; font-size:1.05rem; }
+  details p { margin:10px 0 0; color:var(--soluk); }
+  .rehber-cagri { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; background:var(--panel); border:1px solid var(--cizgi); border-radius:14px; padding:26px 28px; }
+  .rehber-cagri h3 { margin:0 0 4px; font-size:1.8rem; color:var(--turuncu); }
+  .rehber-cagri p { margin:0; color:var(--soluk); }
+  .son { text-align:center; padding:80px 0; background:linear-gradient(180deg,var(--gece),rgba(14,19,27,.6)), url("../img/s/G1_yorunge.jpg") center/cover; }
+  .son h2 { font-size:clamp(2.2rem,6vw,3.6rem); }
+  .son .dugmeler { justify-content:center; }
+</style>
+</head>
+<body>
+<nav class="ust"><div class="kap">
+  <a class="logo" href="../ja/"><img src="../img/icon.png" alt="">SHADOW COLONY</a>
+  <div class="bag">
+    <a class="gizle" href="../ja/#fragman">トレーラー</a>
+    <a class="gizle" href="../ja/#ozellikler">特徴</a>
+    <a class="gizle" href="../ja/guide/">ガイド</a>
+    <a class="gizle" href="../press/">プレス</a>
+    <select class="dil" aria-label="Language" onchange="try{localStorage.setItem('dil',this.options[this.selectedIndex].dataset.kod)}catch(e){};location.href=this.value"><option data-kod="en" value="../en/">English</option><option data-kod="tr" value="../tr/">Türkçe</option><option data-kod="de" value="../de/">Deutsch</option><option data-kod="fr" value="../fr/">Français</option><option data-kod="ja" value="../ja/" selected>日本語</option><option data-kod="ko" value="../ko/">한국어</option></select>
+  </div>
+</div></nav>
+
+<header class="giris"><div class="kap">
+  <h1>SHADOW COLONY</h1>
+  <p class="slogan">闇に生きろ。夜明け前に戻れ。</p>
+  <div class="dugmeler">
+    <a class="dugme ana" href="#fragman">▶ トレーラーを見る</a>
+    <a class="dugme ikincil" href="guide/">ゲームガイド</a>
+  </div>
+  <div class="rozetler"><span class="rozet">基本プレイ無料</span><span class="rozet">課金で強くならない</span><span class="rozet">オフラインでプレイ</span><span class="rozet">6言語対応</span></div>
+</div></header>
+
+<section id="fragman"><div class="kap">
+  <h2>トレーラー</h2>
+  <p class="alt">太陽は死をもたらすものになった。生き残った人々の暮らしがここにある。</p>
+  <div class="video"><video controls preload="metadata" poster="../video/kapak.jpg" playsinline><source src="../video/fragman_en.mp4" type="video/mp4"></video></div>
+</div></section>
+
+<section id="hikaye"><div class="kap">
+  <h2>ストーリー</h2>
+  <p class="alt">たった3週間だった。</p>
+  <div class="hikaye">
+    <div class="sahne2"><img src="../img/s/S1_felaket.jpg" alt="" loading="lazy"><div class="metin"><h3>ある朝、太陽が変わった</h3><p>オゾン層はわずか3週間で引き裂かれた。日の光は命を奪うものとなり、街は空っぽになった。</p></div></div>
+    <div class="sahne2"><img src="../img/s/S2_inis.jpg" alt="" loading="lazy"><div class="metin"><h3>生き残った人々は地下へ</h3><p>地下鉄のトンネルと鉱山の坑道がシェルターになった。あなたはそのひとつのリーダーだ。</p></div></div>
+    <div class="sahne2"><img src="../img/s/S3b.jpg" alt="" loading="lazy"><div class="metin"><h3>光の中に残った者は死ななかった</h3><p>彼らは変わった。今では夜の地上をさまよい、あらゆる音を聞きつける。</p></div></div>
+    <div class="sahne2"><img src="../img/s/G1_yorunge.jpg" alt="" loading="lazy"><div class="metin"><h3>奴らの仕業だった</h3><p>軌道上の艦隊が太陽を兵器に変えた。夜明けになるとロボットを投下し、地上を自分たちのものにしている。</p></div></div>
+    <div class="sahne2"><img src="../img/s/S6b.jpg" alt="" loading="lazy"><div class="metin"><h3>最後のシャトル</h3><p>ロボットは宇宙港のコロニーシャトルを封鎖した。修理し、打ち上げ、人々を新しい世界へ導け。</p></div></div>
+  </div>
+</div></section>
+
+<section id="ozellikler"><div class="kap">
+  <h2>プレイ内容</h2>
+  <p class="alt">夜は欲望、夜明けには帰還。</p>
+  <div class="ozellikler">
+    <div class="ozellik"><img src="../img/g/ekran_01_o_yagma.jpg" alt="" loading="lazy"><div><h3>夜のレイド</h3><p>日が暮れたら地上へ。箱や建物を漁り、朝日に焼かれる前にエレベーターへ駆け戻れ。</p></div></div>
+    <div class="ozellik"><img src="../img/g/ekran_02_o_nadir.jpg" alt="" loading="lazy"><div><h3>レジェンダリーな戦利品</h3><p>レアな箱、レジェンダリー武器、装備、設計図。毎晩が欲望と恐怖の賭けだ。</p></div></div>
+    <div class="ozellik"><img src="../img/s/S5_robot.jpg" alt="" loading="lazy"><div><h3>ミュータントとロボット</h3><p>銃、手榴弾、EMP、煙幕で戦うか、影の中をすり抜けろ。兵士の部隊も共に戦える。</p></div></div>
+    <div class="ozellik"><img src="../img/s/S7_yasam.jpg" alt="" loading="lazy"><div><h3>地下コロニー</h3><p>最大200人が暮らす3フロアのシェルターを掘れ:発電機、水、温室、家畜小屋、研究所、兵舎。</p></div></div>
+    <div class="ozellik"><img src="../img/s/S8_aile.jpg" alt="" loading="lazy"><div><h3>家族と選択</h3><p>子どもは成長し、大人は年を取り、危機は訪れる。すべての選択に代償がある。</p></div></div>
+    <div class="ozellik"><img src="../img/s/S9_kusatma.jpg" alt="" loading="lazy"><div><h3>シェルターを守れ</h3><p>群れが来たら見張りが入口を守り、兵舎から増援が駆けつける。</p></div></div>
+  </div>
+</div></section>
+
+<section id="bolgeler"><div class="kap">
+  <h2>4つの地域</h2>
+  <p class="alt">先へ進むほど危険で、そして豊かになる。</p>
+  <div class="bolgeler">
+    <div class="bolge"><span class="zor">I</span><h3>廃墟</h3><p>砂漠の砂に沈んでいく郊外。すべてのコロニーはここから始まる。</p></div>
+    <div class="bolge"><span class="zor">II</span><h3>廃都市</h3><p>店先と消えたネオン:ミュータントの街。</p></div>
+    <div class="bolge"><span class="zor">III</span><h3>軍事基地</h3><p>土嚢、見張り塔、そしてロボットの巡回。</p></div>
+    <div class="bolge"><span class="zor">IV</span><h3>宇宙港</h3><p>錆びた埠頭、封鎖された格納庫、そして最後のシャトル。</p></div>
+  </div>
+</div></section>
+
+<section id="rehber"><div class="kap">
+  <div class="rehber-cagri"><div><h3>公式ゲームガイド</h3><p>レイド、敵、武器、部屋、コロニー運営、防衛、そして新世界:すべてのシステムを詳しく解説。</p></div><a class="dugme ana" href="guide/">ゲームガイド</a></div>
+</div></section>
+
+<section id="galeri"><div class="kap">
+  <h2>ギャラリー</h2>
+  <p class="alt">ゲーム内スクリーンショット。</p>
+  <div class="galeri"><a href="../img/g/ekran_01_o_yagma.jpg"><img src="../img/g/ekran_01_o_yagma.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_02_o_nadir.jpg"><img src="../img/g/ekran_02_o_nadir.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_03_o_envanter.jpg"><img src="../img/g/ekran_03_o_envanter.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_04_o_ekip.jpg"><img src="../img/g/ekran_04_o_ekip.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_05_o_kat0.jpg"><img src="../img/g/ekran_05_o_kat0.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_06_o_karar.jpg"><img src="../img/g/ekran_06_o_karar.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_07_o_yetenek.jpg"><img src="../img/g/ekran_07_o_yetenek.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_08_o_patron.jpg"><img src="../img/g/ekran_08_o_patron.jpg" alt="" loading="lazy"></a></div>
+</div></section>
+
+<section id="sss"><div class="kap">
+  <h2>よくある質問</h2>
+  <div class="sss">
+    <details><summary>対応プラットフォームは?</summary><p>まずはAndroid(Google Play)。iOSとPCも予定しています。</p></details>
+    <details><summary>無料ですか?</summary><p>はい、基本プレイ無料です。課金で強くなる要素はありません:武器と装備は地上でのみ手に入ります。</p></details>
+    <details><summary>インターネット接続は必要?</summary><p>いいえ。完全にオフラインで遊べます。セーブデータは端末に保存されます。</p></details>
+    <details><summary>対応言語は?</summary><p>日本語、English、Türkçe、Deutsch、Français、한국어。</p></details>
+  </div>
+</div></section>
+
+<section class="son" id="oyna"><div class="kap">
+  <h2>夜は短い。</h2>
+  <p class="alt">いち早くプレイ:Google Playのクローズドテストに参加しよう。</p>
+  <div class="dugmeler"><a class="dugme ana" href="mailto:support@shadowcolonygame.com?subject=Shadow%20Colony">テストに参加</a></div>
+</div></section>
+
+<footer class="alt-bilgi"><div class="kap">
+  <div><a href="../ja/">ホーム</a><a href="../ja/guide/">ガイド</a><a href="../press/">プレス</a><a href="../privacy/">プライバシー</a></div>
+  <div>サポート: <a href="mailto:support@shadowcolonygame.com">support@shadowcolonygame.com</a> · © 2026 Shadow Colony · トレーラー音楽:「Homecoming」</div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oyun Rehberi — Shadow Colony</title>
+<meta name="description" content="Shadow Colony resmî oyun rehberi: gece baskınları, düşmanlar, silahlar, sığınak bölmeleri, halk yönetimi, savunma, ilerleme ve Yeni Dünya.">
+<meta property="og:title" content="Shadow Colony — Oyun Rehberi">
+<meta property="og:image" content="https://shadowcolonygame.com/img/hero.png">
+<link rel="alternate" hreflang="en" href="https://shadowcolonygame.com/en/guide/">
+<link rel="alternate" hreflang="tr" href="https://shadowcolonygame.com/tr/guide/">
+<link rel="alternate" hreflang="de" href="https://shadowcolonygame.com/de/guide/">
+<link rel="alternate" hreflang="fr" href="https://shadowcolonygame.com/fr/guide/">
+<link rel="alternate" hreflang="ja" href="https://shadowcolonygame.com/ja/guide/">
+<link rel="alternate" hreflang="ko" href="https://shadowcolonygame.com/ko/guide/">
+<link rel="alternate" hreflang="x-default" href="https://shadowcolonygame.com/en/guide/">
+<link rel="icon" href="../../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css">
+<style>.rehber-ust { background:linear-gradient(180deg,rgba(14,19,27,.2),var(--gece)), url("../../img/s/S7_yasam.jpg") center/cover; }</style>
+</head>
+<body>
+<nav class="ust"><div class="kap">
+  <a class="logo" href="../../tr/"><img src="../../img/icon.png" alt="">SHADOW COLONY</a>
+  <div class="bag">
+    <a class="gizle" href="../../tr/#fragman">Fragman</a>
+    <a class="gizle" href="../../tr/#ozellikler">Özellikler</a>
+    <a class="gizle aktif" href="../../tr/guide/">Rehber</a>
+    <a class="gizle" href="../../press/">Basın</a>
+    <select class="dil" aria-label="Language" onchange="try{localStorage.setItem('dil',this.options[this.selectedIndex].dataset.kod)}catch(e){};location.href=this.value"><option data-kod="en" value="../../en/guide/">English</option><option data-kod="tr" value="../../tr/guide/" selected>Türkçe</option><option data-kod="de" value="../../de/guide/">Deutsch</option><option data-kod="fr" value="../../fr/guide/">Français</option><option data-kod="ja" value="../../ja/guide/">日本語</option><option data-kod="ko" value="../../ko/guide/">한국어</option></select>
+  </div>
+</div></nav>
+<header class="rehber-ust"><div class="kap">
+  <h1>OYUN REHBERİ</h1>
+  <p>Gece yüzeye çık, şafaktan önce dön, yer altında bir koloni kur. Shadow Colony'nin bütün sistemleri, ilk geceden Yeni Dünya'ya.</p>
+</div></header>
+<div class="rehber">
+<aside>
+  <h4>İçindekiler</h4>
+  <a href="#temel">1. Temel döngü</a>
+  <a href="#ilk-gece">2. İlk gece</a>
+  <a href="#baskin">3. Gece baskını</a>
+  <a class="alt-baslik" href="#bilet">Bilet ve devriye</a>
+  <a class="alt-baslik" href="#safak">Şafak ve güneş</a>
+  <a class="alt-baslik" href="#canta">Çanta ve bayılma</a>
+  <a class="alt-baslik" href="#harita">Harita ve sis</a>
+  <a class="alt-baslik" href="#yagma">Sandık, bina, ocak</a>
+  <a class="alt-baslik" href="#gece-kosullari">Gece koşulları</a>
+  <a href="#bolgeler">4. Bölgeler</a>
+  <a href="#dusmanlar">5. Düşmanlar</a>
+  <a href="#silahlar">6. Silah ve ekipman</a>
+  <a class="alt-baslik" href="#sarf">Sarf malzemeleri</a>
+  <a href="#siginak">7. Sığınak ve bölmeler</a>
+  <a class="alt-baslik" href="#kaynaklar">Kaynaklar</a>
+  <a class="alt-baslik" href="#besin">Besin zinciri</a>
+  <a class="alt-baslik" href="#yasam">Yaşam desteği</a>
+  <a href="#halk">8. Halk ve yönetim</a>
+  <a class="alt-baslik" href="#aileler">Aileler ve kuşaklar</a>
+  <a class="alt-baslik" href="#kararlar">Krizler ve kararlar</a>
+  <a class="alt-baslik" href="#mevsimler">Mevsimler</a>
+  <a href="#savunma">9. Sığınak savunması</a>
+  <a href="#uretim">10. Üretim ve şemalar</a>
+  <a href="#ilerleme">11. İlerleme</a>
+  <a class="alt-baslik" href="#lider">Lider yetenekleri</a>
+  <a class="alt-baslik" href="#projeler">Mega projeler</a>
+  <a class="alt-baslik" href="#final">Mekik ve Yeni Dünya</a>
+  <a href="#ipuclari">12. Uzman ipuçları</a>
+</aside>
+<main>
+<h2 id="temel">1. Temel döngü</h2>
+<p>Bir sabah güneş değişti: ozon tabakası üç haftada delindi ve gün ışığı öldürücü oldu. Kurtulanlar metro tünellerine ve maden galerilerine sığındı. Sen bu sığınaklardan birinin <strong>liderisin</strong>.</p>
+<p>Oyun iki iç içe döngüden oluşur:</p>
+<div class="kutular">
+  <div class="kutu"><h4>Gece: yüzey</h4><p>Asansörle yüzeye çık, sandıkları ve binaları yağmala, düşmanlardan kaç ya da savaş, <strong>şafaktan önce</strong> asansöre dön.</p></div>
+  <div class="kutu"><h4>Gündüz: yer altı</h4><p>Getirdiğin malzemeyle bölme kaz, halkını işe koy, üret, araştır, koloniyi büyüt ve gelen saldırılara hazırlan.</p></div>
+</div>
+<p>Kaynaklar sen yüzeydeyken de, oyunu kapattığında da birikir. Her baskın koloniyi büyütür; büyüyen koloni de daha zor baskınlara hazırlar.</p>
+<img class="sahne" src="../../img/s/S2_inis.jpg" alt="Asansörle yer altına iniş" loading="lazy">
+
+<h2 id="ilk-gece">2. İlk gece: adım adım</h2>
+<ol class="adimlar">
+  <li><strong>Yüzeye çık:</strong> sığınaktaki <strong>YÜZEYE ÇIK</strong> düğmesi bir bilet harcar ve seni asansörle yüzeye çıkarır.</li>
+  <li><strong>Sandıklara git:</strong> parlayan sandıklara yürü; yakınlaşınca yağma kendiliğinden başlar. Dolu çanta hücreleri sol üstte görünür.</li>
+  <li><strong>Saati izle:</strong> üstteki sayaç şafağa kalan süreyi gösterir. Sayaç bitmeden asansöre dön.</li>
+  <li><strong>Asansöre dön:</strong> sağ dönünce çantadaki her şey koloniye geçer, bulunan ekipman depoya girer.</li>
+  <li><strong>Sığınakta harca:</strong> hurdayla yeni bölme kaz, boştaki halkı işe yerleştir.</li>
+</ol>
+<div class="not ipucu"><b>İlk 5 baskın kayıpsız:</b> bayılsan da ganimetin kaybolmaz. Oyunu tanımak için bu baskınları rahatça kullan.</div>
+
+<h2 id="baskin">3. Gece baskını</h2>
+<img class="sahne" src="../../img/g/ekran_01_o_yagma.jpg" alt="Gece baskını" loading="lazy">
+<h3 id="bilet">Bilet ve kısa devriye</h3>
+<ul>
+  <li>Her yüzeye çıkış <strong>1 bilet</strong> harcar. Biletler zamanla dolar ve <strong>en çok 4</strong> birikir.</li>
+  <li><strong>Baskın Hazırlık Bölmesi</strong> bileti daha hızlı doldurur. Görevler ve hedefler de bilet verir.</li>
+  <li>Bilet bittiyse <strong>kısa devriye</strong> yapabilirsin: biletsizdir ama ganimet yarıdır ve nadir sandık çıkmaz.</li>
+</ul>
+<h3 id="safak">Şafak ve güneş</h3>
+<ul>
+  <li>Güneş doğunca ışıkta kalan her şey yanar: canın saniye saniye azalır.</li>
+  <li><strong>Bina gölgelerinde</strong> kal ve asansöre gölgeden gölgeye koş. Şafakta sağ dönmek <strong>bonus ganimet</strong> verir.</li>
+  <li>Başlıklar (kaynakçı gözlüğü, güneş peçesi, termal kask), <strong>Kalkan Bölmesi</strong> ve Laboratuvar'da yapılan <strong>Güneş Kalkanı</strong> güneş hasarını azaltır.</li>
+  <li>Mutantları da güneş yakar; şafakta gölgeye kaçarlar. Robotlara ise güneş işlemez.</li>
+</ul>
+<h3 id="canta">Çanta, Güvenli Kese ve bayılma</h3>
+<ul>
+  <li>Ganimet çanta hücrelerine girer. Daha büyük çanta (sırt çantası, askerî çanta) ve <strong>Geniş Sırt</strong> yeteneği hücre ekler.</li>
+  <li><strong>Güvenli Kese</strong>: içindekiler bayılsan da kaybolmaz; en değerli malzemeyi buraya koy.</li>
+  <li>Canın biterse <strong>bayılırsın</strong>: çantadakilerin <strong>yarısı</strong> ve o gece bulunan <strong>eşyaların hepsi</strong> kaybolur. Lider bir süre dinlenir; Revir bu süreyi kısaltır.</li>
+</ul>
+<h3 id="harita">Harita, keşif sisi ve sürü</h3>
+<ul>
+  <li>Harita sağ üstte. Yürüdüğün yerler açılır, açılmamış yerler <strong>sis</strong> altındadır ve sisin içindeki düşmanları göremezsin.</li>
+  <li>Gecenin belli anlarında harita kenarından bir <strong>sürü</strong> çıkar ve sana yürür. Uyarı gelince gölgeye, binaya ya da asansöre yönel.</li>
+  <li><strong>Araç</strong>: haritada bir yolda durur. Kaputundan <strong>ONAR</strong>, arkasından <strong>YAKIT KOY</strong>, kapısından <strong>BİN</strong>. Hızlıdır ve mutantları ezer ama motor sesi düşman çeker.</li>
+</ul>
+<h3 id="yagma">Sandıklar, binalar, döküm ocağı, hayatta kalanlar</h3>
+<div class="kutular">
+  <div class="kutu"><h4>Nadir sandık</h4><p>Altın ışıklı ağır kasa. Parça, şema ve iyi ekipman verir; genelde başında bir bekçi durur.</p></div>
+  <div class="kutu"><h4>Girilebilir bina</h4><p>Hastane, okul, fabrika… İçeride dolaplar ve <strong>anahtar kartla</strong> açılan, en iyi ganimetin olduğu kilitli oda var.</p></div>
+  <div class="kutu"><h4>Kaçak döküm ocağı</h4><p>Çantadaki hurdayı eritir (3 hurda → 1 külçe). Eritme ses ve ışık yapar; yakındaki düşmanlar gelir.</p></div>
+  <div class="kutu"><h4>Hayatta kalan</h4><p>Kapana kısılmış biri. Gardiyanını yen, serbest bırak, birlikte asansöre dön: halkına katılır.</p></div>
+</div>
+<h3 id="gece-kosullari">Gece koşulları</h3>
+<p>Birkaç baskından sonra gecelerin yaklaşık yarısı özel bir koşulla gelir. Sefer panelinde önceden görünür:</p>
+<table class="tablo"><tr><th>Koşul</th><th>Etki</th></tr>
+<tr><td>Sisli gece</td><td>Görüş kısa, her yer pus altında; mutantlar seni %30 geç fark eder · ganimet +%15</td></tr>
+<tr><td>Dolunay</td><td>Mutantlar %15 hızlı ve uzaktan görür · +1 nadir sandık</td></tr>
+<tr><td>Sessiz gece</td><td>Düşman %30 az · ganimet −%15</td></tr>
+<tr><td>Kızıl gece</td><td>Düşman %30 fazla · ganimet +%40</td></tr>
+</table>
+<p>Ayrıca haftalık <strong>fırtına</strong> ve <strong>gece etkinlikleri</strong> (ör. Altın Gece, Kızıl Ay) kuralları değiştirir. Her bölgede bir <strong>patron gecesi</strong> vardır.</p>
+
+<h2 id="bolgeler">4. Bölgeler</h2>
+<p>Dört bölge sırayla açılır. Her bölgenin kenarında bir sonrakine giden <strong>bölge kapısı</strong> vardır: sarı kapı Laboratuvar'da üretilen kitle onarılır, yeşil kapıdan geçilir.</p>
+<table class="tablo"><tr><th>Bölge</th><th>Kimlik</th><th>Patron</th></tr>
+<tr><td>I · Harabeler</td><td>Çöl kumuna gömülen banliyö. Her koloni burada başlar.</td><td>Kül Devi</td></tr>
+<tr><td>II · Terk Şehir</td><td>Dükkân önleri, sönük neonlar: mutantların şehri.</td><td>Erimiş Dev</td></tr>
+<tr><td>III · Askerî Üs</td><td>Kum torbaları, nöbet kuleleri, robot devriyeleri. Elektronik ve güç hücresi burada.</td><td>Savaş Robotu</td></tr>
+<tr><td>IV · Uzay Limanı</td><td>Paslı rıhtımlar, mühürlü hangarlar ve son koloni mekiği.</td><td>Yörünge Muhafızı</td></tr>
+</table>
+<p>Patron yenilirse bölge temizlenir ve nadir ekipman düşer. Uzay Limanı'nı bayılmadan bitirirsen <strong>Kabus kademeleri</strong> açılır (en çok 10): düşman güçlenir, ganimet bollaşır.</p>
+
+<h2 id="dusmanlar">5. Düşmanlar</h2>
+<img class="sahne" src="../../img/s/S3b.jpg" alt="Mutantlar" loading="lazy">
+<h3>Mutantlar: ışıkta kalıp ölmeyenler</h3>
+<table class="tablo"><tr><th>Düşman</th><th>Nasıl davranır</th><th>Nasıl başa çıkılır</th></tr>
+<tr><td>Yanık mutant</td><td>Gece dolaşır, sese gelir; şafakta gölgeye kaçar.</td><td>Sessiz ilerle; fişekle başka yöne çek.</td></tr>
+<tr><td>Koşucu</td><td>En hızlısı ama kırılgan.</td><td>Kaçarak kurtulamazsın: köşede bekle, yaklaşınca vur.</td></tr>
+<tr><td>Tank mutant</td><td>İri, yavaş, üç kat dayanıklı; yakalarsa sert vurur.</td><td>Kaçmak kolay, öldürmek pahalı: mermini düşün.</td></tr>
+<tr><td>Tükürgen</td><td>Uzaktan asit tükürür, yaklaşınca kaçar.</td><td>Duvarın arkasına geç ya da üstüne koş: yakında zayıftır.</td></tr>
+<tr><td>Patlayan</td><td>Gaz dolu; yanına gelince ya da ölünce patlar.</td><td>Uzaktan vur, diğer düşmanların yanında patlat.</td></tr>
+</table>
+<h3>Robotlar: gemilerin askerleri</h3>
+<table class="tablo"><tr><th>Düşman</th><th>Nasıl davranır</th><th>Nasıl başa çıkılır</th></tr>
+<tr><td>Gözcü robot</td><td>Uçar, saldırmaz ama seni görünce alarm verir: çevredeki bütün düşmanlar gelir.</td><td>Görüş alanına girmeden vur ya da dolaş.</td></tr>
+<tr><td>Muhafız robot</td><td>Üs'ü ve Liman'ı bekler. Önündeki koni görüş alanıdır.</td><td>Kırmızı çizgi yanarsa lazer gelir: hemen yana kaç. EMP ile sustur.</td></tr>
+<tr><td>Şafak robotu</td><td>Güneş ona işlemez; şafakta harita kenarından iner.</td><td>Fişeğe kanmaz. Düşünce elektronik bırakır.</td></tr>
+</table>
+<div class="not"><b>Fişek</b> mutantları ışığa çeker, robotları çekmez. <b>EMP</b> yalnız robotları susturur, mutantlara etkisizdir.</div>
+
+<h2 id="silahlar">6. Silah ve ekipman</h2>
+<img class="sahne" src="../../img/g/ekran_03_o_envanter.jpg" alt="Envanter ve ekipman" loading="lazy">
+<p>Dört ekipman yuvası vardır: <strong>silah</strong>, <strong>başlık</strong> (güneşe karşı), <strong>çanta</strong> (hücre) ve <strong>tılsım</strong> (şans tılsımı: ganimet · kalp madalyonu: can · rüzgâr tüyü: kaçış).</p>
+<table class="tablo"><tr><th>Silah</th><th>Tür</th><th>Not</th></tr>
+<tr><td>Levye, Pala, Balyoz</td><td>Yakın dövüş</td><td>Mermi harcamaz.</td></tr>
+<tr><td>Tabanca</td><td>Ateşli</td><td>Tabanca mermisi; başlangıç silahı.</td></tr>
+<tr><td>Pompalı</td><td>Ateşli</td><td>Her atış üç saçma; yakında çok güçlü.</td></tr>
+<tr><td>Arbalet</td><td>Ateşli</td><td>Sessiz, uzun menzil: düşmanları uyandırmaz.</td></tr>
+<tr><td>Av tüfeği</td><td>Ateşli</td><td>Uzun menzil, tek ağır atış; fişeği nadir.</td></tr>
+<tr><td>Makineli</td><td>Ateşli</td><td>Seri atış; mermi yer.</td></tr>
+</table>
+<ul>
+  <li><strong>Nadirlik:</strong> Sıradan · Nadir · Efsanevi. Nadirlik ve geliştirme seviyesi hem hasarı hem dayanıklılığı artırır.</li>
+  <li><strong>Mermi:</strong> her ateşli silah kendi mermisini harcar; mermisi biten silah dipçikle vurur.</li>
+  <li><strong>Dayanıklılık:</strong> her saldırıda azalır, sıfırda silah kırılır. Laboratuvar'da onarılır.</li>
+  <li>Sağ dönersen bulunan ekipman depoya girer; bayılırsan kaybolur.</li>
+</ul>
+<h3 id="sarf">Sarf malzemeleri (hızlı eşya yuvaları)</h3>
+<p>SALDIR düğmesinin çevresindeki iki yuvaya sarf eşyaları gelir; » ile eşyayı değiştirirsin.</p>
+<table class="tablo"><tr><th>Eşya</th><th>Etki</th></tr>
+<tr><td>İşaret fişeği</td><td>Mutantları ışığa çeker (robotlar kanmaz).</td></tr>
+<tr><td>El bombası</td><td>Gecikmeli patlama, alan hasarı; gürültüsü uzaktakileri uyandırır.</td></tr>
+<tr><td>EMP bombası</td><td>Robotları 6 saniye susturur: ateş edemez, yürüyemez, alarm veremez.</td></tr>
+<tr><td>Duman bombası</td><td>5 saniye boyunca düşmanlar seni kaybeder: kaçış için.</td></tr>
+<tr><td>Şırınga</td><td>Anında +40 can.</td></tr>
+<tr><td>İlk yardım çantası</td><td>Anında +100 can. Üretimi zor: Laboratuvar Sv3 ve Revir ister.</td></tr>
+</table>
+<p>Baskın öncesi çiftlik ürünlerinden <strong>baskın öğünü</strong> seçebilirsin (çorba, süt-yumurta, et yahnisi, meyve): can, hasar ya da hız verir.</p>
+
+<h2 id="siginak">7. Sığınak ve bölmeler</h2>
+<img class="sahne" src="../../img/s/S7_yasam.jpg" alt="Yer altı kolonisi" loading="lazy">
+<p>Sığınak <strong>3 kattan</strong> oluşur (toplam 144 bölme), nüfus tavanı <strong>200</strong>. Toprak duvara yürüyüp bölme kazarsın; aynı türden yan yana bölmeler birleşip salon olur. Her bölme yükseltilebilir ve <strong>işçisiz bölme üretmez</strong>.</p>
+<table class="tablo"><tr><th>Bölme</th><th>Ne yapar</th></tr>
+<tr><td>Jeneratör</td><td>Enerji üretir. Enerji biterse üretim durur.</td></tr>
+<tr><td>Güneş Paneli</td><td>Gündüz bedava enerji, gece üretmez.</td></tr>
+<tr><td>Akü</td><td>Enerji depo sınırını artırır; gündüz üretileni geceye saklar.</td></tr>
+<tr><td>Su Arıtma</td><td>İçme suyu üretir.</td></tr>
+<tr><td>Su Deposu</td><td>Su depo sınırını artırır.</td></tr>
+<tr><td>Sera</td><td>Sebze; buğday ve meyve (tohumla açılır).</td></tr>
+<tr><td>Ahır</td><td>İnek ve keçi: süt ve et. Su içer, Sera'dan fazla yiyecek verir.</td></tr>
+<tr><td>Kümes</td><td>Tavuk: yumurta ve et. Az su içer.</td></tr>
+<tr><td>Yemekhane</td><td>Aşçılar tüketimi azaltır; dört besin kaynağı birlikteyse dengeli öğün, moral.</td></tr>
+<tr><td>Soğuk Depo</td><td>Yiyecek sınırını artırır, bozulmayı yavaşlatır.</td></tr>
+<tr><td>Ana Depo</td><td>Depo ızgarasına hücre, hurda sınırına kapasite ekler.</td></tr>
+<tr><td>Yatakhane</td><td>Yatak ekler: nüfusun büyümesi için yer.</td></tr>
+<tr><td>Havalandırma</td><td>Her seviye 12 kişiye hava.</td></tr>
+<tr><td>İklimlendirme</td><td>Sığınağı 16–26°C konfor aralığında tutar.</td></tr>
+<tr><td>Revir</td><td>Yaralılar hızlı iyileşir; bayılan liderin dinlenmesi kısalır.</td></tr>
+<tr><td>Okul</td><td>Halkı eğitir, ustalığı artırır (★5 yalnız Okul'da).</td></tr>
+<tr><td>Laboratuvar</td><td>Bütün üretim: mermi, sarf, ekipman, onarım, geliştirme, araştırma.</td></tr>
+<tr><td>Kışla</td><td>Askerler: saldırıda girişi tutar, baskına yanında gelir.</td></tr>
+<tr><td>Kalkan Bölmesi</td><td>Yüzeyde güneş hasarını azaltır.</td></tr>
+<tr><td>Baskın Hazırlık Bölmesi</td><td>Biletleri hızlı doldurur.</td></tr>
+<tr><td>Telsiz</td><td>Yeni bölgelerin sinyalini yakalar, telsiz kayıtlarını çözer.</td></tr>
+</table>
+<h3 id="kaynaklar">Kaynaklar</h3>
+<div class="kutular">
+  <div class="kutu"><h4>Su · Yiyecek · Enerji</h4><p>Hayati üçlü. Biri biterse önce moral, sonra can düşer.</p></div>
+  <div class="kutu"><h4>Hurda</h4><p>Kazma, yükseltme, onarım. Yüzeyden ve seferlerden.</p></div>
+  <div class="kutu"><h4>Parça · Elektronik</h4><p>Parça nadir sandıklardan; elektronik robotlardan. Silah geliştirme, kapılar, araç.</p></div>
+  <div class="kutu"><h4>Külçe · Yakıt</h4><p>Külçe döküm ocağından, üretimde kullanılır. Yakıt araç ve jeneratör takviyesi.</p></div>
+  <div class="kutu"><h4>Güç hücresi</h4><p>En değerlisi: Üs ve Liman'ın nadir sandıkları, robot patronu. Liman kapısı ve mekik için.</p></div>
+  <div class="kutu"><h4>Kristal · Bilet</h4><p>Kristal yalnız görünüm ve kozmetik içindir; güç satılmaz. Bilet yüzeye çıkış hakkıdır.</p></div>
+</div>
+<h3 id="besin">Besin zinciri</h3>
+<ul>
+  <li><strong>Sera</strong> sebze, buğday ya da meyve yetiştirir. Buğday hayvanları besler (+%20), meyve moral verir.</li>
+  <li><strong>Ahır</strong> ve <strong>Kümes</strong>te sürü, su ve yiyecek varken ve bakıcı çalışırken ürer. <strong>KES</strong> ile anında et alırsın; sürü liderini günde bir <strong>SEV</strong> (+%10).</li>
+  <li>Hasat bölmede birikir; dokunarak toplarsın. Tohumlar yüzeyden gelir, depoya konur, Sera depodakini harcar.</li>
+</ul>
+<img class="sahne" src="../../img/s/Y2_sera.jpg" alt="Sera" loading="lazy">
+<h3 id="yasam">Yaşam desteği: hava ve sıcaklık</h3>
+<ul>
+  <li>Asansör kuyusu 10 kişiye hava verir; fazlası için <strong>Havalandırma</strong> (seviye başına 12 kişi).</li>
+  <li>Gündüz güneş ve jeneratörler sığınağı ısıtır, gece soğur. <strong>İklimlendirme</strong> 16–26°C'de tutar.</li>
+  <li>Bozulursa önce moral, sonra üretim, en sonunda can düşer.</li>
+</ul>
+
+<h2 id="halk">8. Halk ve koloni yönetimi</h2>
+<p>Her kolonistin bir adı, kişiliği ve her işte ayrı bir <strong>ustalığı</strong> (★1–★5) vardır. Ustası, ★1'den iki kat fazla üretir. Aynı işte çalışan zamanla yıldız kazanır (★4'e kadar); ★5 için Okul gerekir. Birini başka işe kaydırırsan orada acemidir.</p>
+<ul>
+  <li><strong>Koloni › YÖNETİM:</strong> sektörlere öncelik ver (Kapalı / Düşük / Normal / Yüksek). Yetmeyen hayati kaynak otomatik <strong>ACİL</strong> olur. İstersen bir kişiyi bir bölmeye sabitlersin.</li>
+  <li><strong>Moral</strong>: yemek çeşitliliği, yaşam koşulları, olaylar ve kararlar etkiler; düşük moral üretimi düşürür.</li>
+  <li><strong>Kişisel istekler</strong>: kolonistler arada bir şey ister (oyuncak, hatıra, kitap…). Karşılarsan yıldız, moral ve kristal kazanırsın.</li>
+</ul>
+<h3 id="aileler">Aileler ve kuşaklar</h3>
+<img class="sahne" src="../../img/s/S8_aile.jpg" alt="Aile" loading="lazy">
+<ul>
+  <li>Kolonistler çift olur, çocukları doğar; çocuklar büyüyünce işe başlar.</li>
+  <li>Herkes her oyun yılında bir yaş büyür; ilk kuşak zamanla yaşlanır, yaşlıların verimi düşer.</li>
+  <li>Kaybedilen biri ardında yas bırakır; anı duvarı kaybedilenleri hatırlar.</li>
+</ul>
+<h3 id="kararlar">Krizler ve kararlar</h3>
+<p>Kolonide bir şey olunca (kıtlık, kapıda göçmenler, salgın, moral çöküşü, saldırı sonrası) iki seçenekli bir karar kartı çıkar. Koloni büyüdükçe kuşak kararları da gelir: çocuklar çalışsın mı okusun mu, yaşlılar emekli olsun mu, kışa nasıl hazırlanılacak. <strong>Her kararın bir bedeli vardır</strong> ve etkisi bir süre sürer.</p>
+<img class="sahne" src="../../img/g/ekran_06_o_karar.jpg" alt="Karar kartı" loading="lazy">
+<h3 id="mevsimler">Mevsimler</h3>
+<p>Her mevsim 8 oyun günü, bir yıl 32 gün sürer. Etki oyunun ilk haftasında yoktur, sonra giderek artar.</p>
+<table class="tablo"><tr><th>Mevsim</th><th>Etki</th></tr>
+<tr><td>İlkbahar</td><td>Su +%15, yiyecek +%10</td></tr>
+<tr><td>Yaz</td><td>Su −%15, yiyecek +%10</td></tr>
+<tr><td>Sonbahar</td><td>Yiyecek +%25, yağmacı saldırıları daha güçlü</td></tr>
+<tr><td>Kış</td><td>Yiyecek −%20, sürüler güçlü, salgın sık; ısınma için hurda ya da enerji harcanır</td></tr>
+</table>
+
+<h2 id="savunma">9. Sığınak savunması</h2>
+<img class="sahne" src="../../img/s/S9_kusatma.jpg" alt="Kuşatma" loading="lazy">
+<p>Koloni büyüdükçe sığınağa saldırılar gelir. Uyarı başlar, siren çalar ve saldırganlar asansörden iner.</p>
+<table class="tablo"><tr><th>Saldırı</th><th>Zayıf noktası</th></tr>
+<tr><td>Sürü</td><td>Duvara takılır: Savunma Duvarı ve Kalkan Bölmesi.</td></tr>
+<tr><td>Yağmacılar</td><td>Askerlere karşı zayıf; dolu depolar onları çeker.</td></tr>
+<tr><td>Robotlar</td><td>Radar ve Laboratuvar onları bozar.</td></tr>
+</table>
+<ul>
+  <li><strong>Girişte nöbet:</strong> askerler önce giriş bölmesinde karşılar; düşen askerin yerine <strong>Kışla</strong>'dan yedek gelir.</li>
+  <li><strong>Asker OTO:</strong> savunma beklenen saldırının altındaysa oyun Kışla'ya kendiliğinden asker atar (kapatılabilir).</li>
+  <li><strong>SAVUN!</strong> düğmesiyle lider de savaşa katılır; her vuruş savunmaya güç ekler.</li>
+  <li>Savunma saldırının iki katıysa saldırı daha kapıda püskürtülür. Üst üste yenilirsen saldırılar seyrekleşir.</li>
+</ul>
+
+<h2 id="uretim">10. Üretim, şemalar ve araştırma</h2>
+<ul>
+  <li><strong>Laboratuvar</strong> üretimi dört sekmeye ayırır: <strong>SİLAH · CEPHANE · EKİPMAN · ALET &amp; SARF</strong>. Seviye arttıkça yeni tarifler açılır.</li>
+  <li><strong>Şemalar</strong>: çoğu silah, ekipman, mermi ve sarf önce şema ister. Şema nadir sandıklardan envantere gelir; dokun › <strong>ÖĞREN</strong>. Kitler ve Güneş Kalkanı şemasızdır.</li>
+  <li><strong>Araştırma</strong> kalıcı geliştirmeler açar (ör. otomatik hasat). Araştırma puanı Laboratuvar'da birikir.</li>
+  <li><strong>Kervan</strong> arada bir gelir: asansör bölmesinde takas yaparsın.</li>
+</ul>
+
+<h2 id="ilerleme">11. İlerleme</h2>
+<p>Görevler ekranındaki <strong>yolculuk şeridi</strong> büyük hedefi gösterir: Harabeler → Şehir → Üs → Liman → Mekik → Final → Yeni Dünya. Günlük ve haftalık görevler, 7 günlük giriş serisi ve başarımlar yol boyunca ödül verir.</p>
+<h3 id="lider">Lider seviyesi ve yetenekler</h3>
+<p>Baskınlar lideri seviye atlatır. Her 5 seviyede 1 yetenek puanı gelir; 8 yetenek, her biri 3 kademe. Hepsini alamazsın, tarzını seç; sıfırlamak ücretsizdir.</p>
+<table class="tablo"><tr><th>Yetenek</th><th>Etki (kademe başına artar)</th></tr>
+<tr><td>Sessiz Adım</td><td>Mutantlar seni daha yakından fark eder.</td></tr>
+<tr><td>Hızlı Eller</td><td>Sandıklar daha hızlı açılır.</td></tr>
+<tr><td>Sağlam</td><td>Yüzeyde daha fazla can.</td></tr>
+<tr><td>Nişancı</td><td>Silah hasarı artar.</td></tr>
+<tr><td>Koşucu</td><td>Koşu hızı artar.</td></tr>
+<tr><td>Tutumlu</td><td>Atışların bir kısmı mermi harcamaz.</td></tr>
+<tr><td>Geniş Sırt</td><td>Envantere hücre ekler.</td></tr>
+<tr><td>Yağmacı</td><td>Sandık ganimeti artar.</td></tr>
+</table>
+<img class="sahne" src="../../img/g/ekran_07_o_yetenek.jpg" alt="Lider yetenekleri" loading="lazy">
+<h3 id="projeler">Mega projeler</h3>
+<p>Koloni › PROJELER: fazla kaynağı kalıcı güce çevirir. Aynı anda tek aşama ilerler, her aşama daha uzun sürer; 5 aşamadan sonra <strong>Usta</strong> seviyeleri başlar.</p>
+<div class="kutular">
+  <div class="kutu"><h4>Su Kulesi</h4><p>Daha çok su, daha büyük su deposu.</p></div>
+  <div class="kutu"><h4>Füzyon Reaktörü</h4><p>Bütün bölmelere daha çok enerji.</p></div>
+  <div class="kutu"><h4>Hidroponik Kubbe</h4><p>Daha çok yiyecek, mutlu halk.</p></div>
+  <div class="kutu"><h4>Savunma Duvarı</h4><p>Saldırılara, en çok sürüye karşı.</p></div>
+  <div class="kutu"><h4>Radar Ağı</h4><p>Saldırıları önceden görür, robotları bozar.</p></div>
+</div>
+<h3 id="final">Mekik, final gecesi ve Yeni Dünya</h3>
+<img class="sahne" src="../../img/s/S6b.jpg" alt="Koloni mekiği" loading="lazy">
+<p>Robotlar Uzay Limanı'ndaki son <strong>koloni mekiğini</strong> mühürledi ve yakıt hücrelerini limanın her yerine dağıttı. Güç hücrelerini topla, mekiği onar ve <strong>final gecesinde</strong> fırlat: öncüler yaşanabilir bir gezegene yola çıkar.</p>
+<p>Sonrasında istediğin zaman koloninle <strong>Yeni Dünya</strong>'ya göç edersin. Her şey sıfırdan başlar ama <strong>Miras puanı</strong>, kristal, robot, görünüşler ve Kabus kademeleri seninle gelir. Miras puanıyla kalıcı yetenekler alırsın; her yeni dünyanın kendi kuralları vardır.</p>
+
+<h2 id="ipuclari">12. Uzman ipuçları</h2>
+<div class="not ipucu"><b>Açgözlülüğün bir sınırı var.</b> Çanta dolduğunda ya da sayaç yarıya indiğinde dönmeyi düşün. Bayılmak o gecenin bütün eşyalarına mal olur.</div>
+<div class="not ipucu"><b>Güvenli Kese'yi boş bırakma.</b> Parça, güç hücresi ve elektronik önce oraya.</div>
+<div class="not ipucu"><b>Önce hava, su, yiyecek.</b> Nüfus artınca Havalandırma'yı unutma: hava bozulursa üretim sessizce düşer.</div>
+<div class="not ipucu"><b>Ustaları kaydırma.</b> ★4'lük bir çalışanı başka işe almak, orada ★1'den başlatmak demektir.</div>
+<div class="not ipucu"><b>Kışla'yı erken kur.</b> Koloni büyüdükçe saldırılar güçlenir; girişteki nöbetçiler ilk savunma hattıdır.</div>
+<div class="not ipucu"><b>Arbalet sessizdir.</b> Gözcü robotları ve uyuyan sürüleri uyandırmadan avlamak için en iyi silah.</div>
+<div class="not uyari"><b>Gölgeyi oku.</b> Şafakta asansöre giden en kısa yol değil, en gölgeli yol seni hayatta tutar.</div>
+</main>
+
+</div>
+<footer class="alt-bilgi"><div class="kap">
+  <div><a href="../../tr/">Ana sayfa</a><a href="../../tr/guide/">Rehber</a><a href="../../press/">Basın</a><a href="../../privacy/">Gizlilik</a></div>
+  <div>Destek: <a href="mailto:support@shadowcolonygame.com">support@shadowcolonygame.com</a> · © 2026 Shadow Colony · Fragman müziği: "Homecoming"</div>
+</div></footer>
+<a class="yukari" href="#" aria-label="↑">↑</a>
+</body>
+</html>

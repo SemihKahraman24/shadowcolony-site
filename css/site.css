@@ -1,0 +1,74 @@
+/* Shadow Colony — ortak stil (ana sayfa, rehber, basın kiti) */
+:root { --gece:#0E131B; --panel:#151C28; --panel2:#1A2333; --koyu:#1E2A44; --turuncu:#F0A63C; --kizil:#C8553D; --yesil:#6BBF59; --mavi:#3FA7D6; --yazi:#E8E4DC; --soluk:#9AA3B2; --cizgi:#26324a; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:72px; }
+body { margin:0; background:var(--gece); color:var(--yazi); font-family:"Barlow",system-ui,sans-serif; line-height:1.65; font-size:17px; }
+h1,h2,h3,h4,.baslik { font-family:"Barlow Condensed",system-ui,sans-serif; letter-spacing:.03em; line-height:1.15; }
+a { color:var(--turuncu); }
+img { max-width:100%; display:block; }
+.kap { max-width:1120px; margin:0 auto; padding:0 16px; }
+
+/* üst menü */
+nav.ust { position:sticky; top:0; z-index:20; background:rgba(14,19,27,.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--cizgi); }
+nav.ust .kap { display:flex; align-items:center; gap:18px; height:60px; }
+nav.ust .logo { display:flex; align-items:center; gap:10px; font-family:"Barlow Condensed"; font-weight:800; color:var(--turuncu); text-decoration:none; font-size:1.3rem; white-space:nowrap; }
+nav.ust .logo img { width:34px; height:34px; border-radius:8px; }
+nav.ust .bag { margin-left:auto; display:flex; gap:18px; align-items:center; }
+nav.ust .bag a { color:var(--yazi); text-decoration:none; font-weight:600; font-size:.95rem; }
+nav.ust .bag a:hover, nav.ust .bag a.aktif { color:var(--turuncu); }
+.dil { background:var(--koyu); color:var(--yazi); border:1px solid var(--cizgi); border-radius:6px; padding:4px 10px; font-weight:600; cursor:pointer; text-decoration:none; font-size:.9rem; }
+@media (max-width:760px) { nav.ust .bag a.gizle { display:none; } }
+
+/* düğmeler, rozetler */
+.dugmeler { display:flex; flex-wrap:wrap; gap:12px; }
+.dugme { display:inline-flex; align-items:center; gap:10px; padding:13px 22px; border-radius:10px; font-family:"Barlow Condensed"; font-weight:800; font-size:1.2rem; text-decoration:none; letter-spacing:.04em; border:0; cursor:pointer; }
+.dugme.ana { background:var(--turuncu); color:#1a1206; }
+.dugme.ikincil { background:rgba(30,42,68,.85); color:var(--yazi); border:1px solid var(--cizgi); }
+.rozetler { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+.rozet { background:rgba(21,28,40,.85); border:1px solid var(--cizgi); border-radius:20px; padding:4px 12px; font-size:.9rem; color:var(--soluk); }
+
+section { padding:72px 0; }
+section h2 { font-size:clamp(2rem,5vw,3rem); margin:0 0 8px; color:var(--turuncu); }
+.alt { color:var(--soluk); margin:0 0 30px; font-size:1.1rem; }
+
+/* alt bilgi */
+footer.alt-bilgi { border-top:1px solid var(--cizgi); padding:30px 0 44px; color:var(--soluk); font-size:.92rem; }
+footer.alt-bilgi .kap { display:flex; flex-wrap:wrap; gap:14px 28px; justify-content:space-between; }
+footer.alt-bilgi a { color:var(--soluk); text-decoration:none; margin-right:14px; }
+footer.alt-bilgi a:hover { color:var(--turuncu); }
+
+/* rehber düzeni: yan menü + içerik */
+.rehber-ust { padding:56px 0 24px; background:linear-gradient(180deg,rgba(14,19,27,.2),var(--gece)), url("../img/s/S7_yasam.jpg") center/cover; }
+.rehber-ust h1 { font-size:clamp(2.6rem,7vw,4.4rem); color:var(--turuncu); margin:0; }
+.rehber-ust p { color:var(--yazi); max-width:720px; font-size:1.15rem; margin:8px 0 0; text-shadow:0 2px 8px rgba(0,0,0,.8); }
+.rehber { display:grid; grid-template-columns:250px 1fr; gap:40px; padding:36px 16px 80px; max-width:1180px; margin:0 auto; }
+.rehber aside { position:sticky; top:76px; align-self:start; max-height:calc(100vh - 92px); overflow:auto; border-right:1px solid var(--cizgi); padding-right:14px; }
+.rehber aside h4 { margin:0 0 8px; color:var(--soluk); font-size:.95rem; text-transform:uppercase; letter-spacing:.12em; }
+.rehber aside a { display:block; color:var(--yazi); text-decoration:none; padding:5px 8px; border-radius:6px; font-size:.95rem; }
+.rehber aside a:hover { background:var(--panel2); color:var(--turuncu); }
+.rehber aside a.alt-baslik { padding-left:20px; color:var(--soluk); font-size:.9rem; }
+.rehber main h2 { font-size:2.2rem; color:var(--turuncu); margin:56px 0 10px; padding-top:8px; border-top:1px solid var(--cizgi); }
+.rehber main h2:first-child { margin-top:0; border-top:0; }
+.rehber main h3 { font-size:1.5rem; margin:30px 0 6px; }
+.rehber main p, .rehber main li { color:#d6d2ca; }
+.rehber main ul { padding-left:22px; }
+.rehber main li { margin:4px 0; }
+.rehber main strong { color:var(--yazi); }
+.rehber main img.sahne { border-radius:12px; border:1px solid var(--cizgi); margin:14px 0 6px; aspect-ratio:16/9; object-fit:cover; width:100%; }
+.not { background:var(--panel); border:1px solid var(--cizgi); border-left:4px solid var(--turuncu); border-radius:10px; padding:12px 16px; margin:16px 0; }
+.not.uyari { border-left-color:var(--kizil); }
+.not.ipucu { border-left-color:var(--yesil); }
+.not b { color:var(--turuncu); }
+.tablo { width:100%; border-collapse:collapse; margin:14px 0 8px; font-size:.97rem; }
+.tablo th, .tablo td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--cizgi); vertical-align:top; }
+.tablo th { color:var(--turuncu); font-family:"Barlow Condensed"; font-size:1.05rem; letter-spacing:.04em; background:var(--panel); }
+.tablo tr:hover td { background:rgba(26,35,51,.6); }
+.kutular { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; margin:14px 0; }
+.kutu { background:var(--panel); border:1px solid var(--cizgi); border-radius:10px; padding:14px 16px; }
+.kutu h4 { margin:0 0 4px; font-size:1.25rem; color:var(--turuncu); }
+.kutu p { margin:0; font-size:.95rem; }
+.adimlar { counter-reset:adim; list-style:none; padding:0 !important; }
+.adimlar li { counter-increment:adim; position:relative; padding:10px 14px 10px 52px; background:var(--panel); border:1px solid var(--cizgi); border-radius:10px; margin:8px 0 !important; }
+.adimlar li::before { content:counter(adim); position:absolute; left:12px; top:9px; width:28px; height:28px; border-radius:50%; background:var(--turuncu); color:#1a1206; font-weight:800; display:flex; align-items:center; justify-content:center; font-family:"Barlow Condensed"; }
+@media (max-width:860px) { .rehber { grid-template-columns:1fr; } .rehber aside { position:static; max-height:none; border-right:0; border-bottom:1px solid var(--cizgi); padding:0 0 12px; } .tablo { font-size:.9rem; } }
+.yukari { position:fixed; right:16px; bottom:16px; background:var(--koyu); border:1px solid var(--cizgi); color:var(--yazi); border-radius:50%; width:44px; height:44px; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1.2rem; }

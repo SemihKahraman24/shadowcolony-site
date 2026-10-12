@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadow Colony — Karanlıkta yaşa. Şafaktan önce dön.</title>
+<meta name="description" content="Gece güneşin kavurduğu yüzeyi yağmala, şafaktan önce dön, yer altında koloni kur. Android için hayatta kalma ve koloni oyunu.">
+<meta property="og:title" content="Shadow Colony">
+<meta property="og:description" content="Karanlıkta yaşa. Şafaktan önce dön.">
+<meta property="og:image" content="https://shadowcolonygame.com/img/hero.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#12171F">
+<link rel="alternate" hreflang="en" href="https://shadowcolonygame.com/en/">
+<link rel="alternate" hreflang="tr" href="https://shadowcolonygame.com/tr/">
+<link rel="alternate" hreflang="de" href="https://shadowcolonygame.com/de/">
+<link rel="alternate" hreflang="fr" href="https://shadowcolonygame.com/fr/">
+<link rel="alternate" hreflang="ja" href="https://shadowcolonygame.com/ja/">
+<link rel="alternate" hreflang="ko" href="https://shadowcolonygame.com/ko/">
+<link rel="alternate" hreflang="x-default" href="https://shadowcolonygame.com/en/">
+<link rel="icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .giris { position:relative; min-height:88vh; display:flex; align-items:flex-end; background:linear-gradient(180deg,rgba(14,19,27,.15) 0%,rgba(14,19,27,.55) 55%,var(--gece) 100%), url("../img/s/S3b.jpg") center/cover no-repeat; }
+  .giris .kap { padding-bottom:64px; }
+  .giris h1 { font-size:clamp(3rem,10vw,6.5rem); color:var(--turuncu); margin:0; text-shadow:0 4px 20px rgba(0,0,0,.7); }
+  .giris .slogan { font-size:clamp(1.2rem,3vw,1.7rem); margin:6px 0 26px; text-shadow:0 2px 10px rgba(0,0,0,.8); }
+  .video { border-radius:14px; overflow:hidden; border:1px solid var(--cizgi); box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  .video video { width:100%; display:block; background:#000; }
+  .hikaye { display:grid; gap:22px; }
+  .sahne2 { display:grid; grid-template-columns:1.2fr 1fr; gap:24px; align-items:center; background:var(--panel); border:1px solid var(--cizgi); border-radius:14px; overflow:hidden; }
+  .sahne2:nth-child(even) { grid-template-columns:1fr 1.2fr; }
+  .sahne2:nth-child(even) img { order:2; }
+  .sahne2 img { width:100%; height:100%; object-fit:cover; aspect-ratio:16/9; }
+  .sahne2 .metin { padding:22px 26px; }
+  .sahne2 h3 { font-size:1.7rem; margin:0 0 6px; }
+  .sahne2 p { margin:0; color:var(--soluk); font-size:1.05rem; }
+  @media (max-width:760px) { .sahne2, .sahne2:nth-child(even) { grid-template-columns:1fr; } .sahne2:nth-child(even) img { order:0; } }
+  .ozellikler { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; }
+  .ozellik { background:var(--panel); border:1px solid var(--cizgi); border-radius:14px; overflow:hidden; }
+  .ozellik img { aspect-ratio:16/9; object-fit:cover; width:100%; }
+  .ozellik div { padding:16px 18px 20px; }
+  .ozellik h3 { margin:0 0 6px; font-size:1.45rem; color:var(--turuncu); }
+  .ozellik p { margin:0; color:var(--soluk); }
+  .bolgeler { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+  .bolge { background:var(--panel); border:1px solid var(--cizgi); border-left:4px solid var(--turuncu); border-radius:10px; padding:16px 18px; }
+  .bolge h3 { margin:0 0 4px; font-size:1.4rem; }
+  .bolge p { margin:0; color:var(--soluk); font-size:.98rem; }
+  .bolge .zor { font-family:"Barlow Condensed"; color:var(--kizil); font-weight:800; letter-spacing:.1em; }
+  .galeri { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
+  .galeri a { display:block; border-radius:10px; overflow:hidden; border:1px solid var(--cizgi); }
+  .galeri img { aspect-ratio:16/9; object-fit:cover; width:100%; transition:transform .25s; }
+  .galeri a:hover img { transform:scale(1.04); }
+  .sss { display:grid; gap:10px; max-width:820px; }
+  details { background:var(--panel); border:1px solid var(--cizgi); border-radius:10px; padding:14px 18px; }
+  summary { cursor:pointer; font-weight:600; font-size:1.05rem; }
+  details p { margin:10px 0 0; color:var(--soluk); }
+  .rehber-cagri { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; background:var(--panel); border:1px solid var(--cizgi); border-radius:14px; padding:26px 28px; }
+  .rehber-cagri h3 { margin:0 0 4px; font-size:1.8rem; color:var(--turuncu); }
+  .rehber-cagri p { margin:0; color:var(--soluk); }
+  .son { text-align:center; padding:80px 0; background:linear-gradient(180deg,var(--gece),rgba(14,19,27,.6)), url("../img/s/G1_yorunge.jpg") center/cover; }
+  .son h2 { font-size:clamp(2.2rem,6vw,3.6rem); }
+  .son .dugmeler { justify-content:center; }
+</style>
+</head>
+<body>
+<nav class="ust"><div class="kap">
+  <a class="logo" href="../tr/"><img src="../img/icon.png" alt="">SHADOW COLONY</a>
+  <div class="bag">
+    <a class="gizle" href="../tr/#fragman">Fragman</a>
+    <a class="gizle" href="../tr/#ozellikler">Özellikler</a>
+    <a class="gizle" href="../tr/guide/">Rehber</a>
+    <a class="gizle" href="../press/">Basın</a>
+    <select class="dil" aria-label="Language" onchange="try{localStorage.setItem('dil',this.options[this.selectedIndex].dataset.kod)}catch(e){};location.href=this.value"><option data-kod="en" value="../en/">English</option><option data-kod="tr" value="../tr/" selected>Türkçe</option><option data-kod="de" value="../de/">Deutsch</option><option data-kod="fr" value="../fr/">Français</option><option data-kod="ja" value="../ja/">日本語</option><option data-kod="ko" value="../ko/">한국어</option></select>
+  </div>
+</div></nav>
+
+<header class="giris"><div class="kap">
+  <h1>SHADOW COLONY</h1>
+  <p class="slogan">Karanlıkta yaşa. Şafaktan önce dön.</p>
+  <div class="dugmeler">
+    <a class="dugme ana" href="#fragman">▶ FRAGMANI İZLE</a>
+    <a class="dugme ikincil" href="guide/">OYUN REHBERİ</a>
+  </div>
+  <div class="rozetler"><span class="rozet">Ücretsiz</span><span class="rozet">Parayla güç satılmaz</span><span class="rozet">İnternetsiz oynanır</span><span class="rozet">6 dil</span></div>
+</div></header>
+
+<section id="fragman"><div class="kap">
+  <h2>Fragman</h2>
+  <p class="alt">Güneş öldürücü oldu. Kurtulanlar böyle yaşıyor.</p>
+  <div class="video"><video controls preload="metadata" poster="../video/kapak.jpg" playsinline><source src="../video/fragman_tr.mp4" type="video/mp4"></video></div>
+</div></section>
+
+<section id="hikaye"><div class="kap">
+  <h2>Hikâye</h2>
+  <p class="alt">Üç hafta yetti.</p>
+  <div class="hikaye">
+    <div class="sahne2"><img src="../img/s/S1_felaket.jpg" alt="" loading="lazy"><div class="metin"><h3>Bir sabah güneş değişti</h3><p>Ozon tabakası üç haftada delindi. Gün ışığı öldürücü oldu, şehirler boşaldı.</p></div></div>
+    <div class="sahne2"><img src="../img/s/S2_inis.jpg" alt="" loading="lazy"><div class="metin"><h3>Kurtulanlar yerin altına indi</h3><p>Metro tünelleri ve maden galerileri sığınak oldu. Sen bunlardan birinin liderisin.</p></div></div>
+    <div class="sahne2"><img src="../img/s/S3b.jpg" alt="" loading="lazy"><div class="metin"><h3>Işıkta kalanlar ölmedi</h3><p>Değiştiler. Artık geceleri yüzeyde dolaşıyorlar ve her sesi duyuyorlar.</p></div></div>
+    <div class="sahne2"><img src="../img/s/G1_yorunge.jpg" alt="" loading="lazy"><div class="metin"><h3>Onlardı</h3><p>Yörüngedeki gemiler güneşi silaha çevirdi. Şafakta robotlarını indirip yüzeyi kendilerine hazırlıyorlar.</p></div></div>
+    <div class="sahne2"><img src="../img/s/S6b.jpg" alt="" loading="lazy"><div class="metin"><h3>Son mekik</h3><p>Robotlar Uzay Limanı'nda bir koloni mekiğini mühürledi. Onar, fırlat ve halkını yeni bir dünyaya götür.</p></div></div>
+  </div>
+</div></section>
+
+<section id="ozellikler"><div class="kap">
+  <h2>Neler yapacaksın</h2>
+  <p class="alt">Gece açgözlülük, şafakta eve dönüş.</p>
+  <div class="ozellikler">
+    <div class="ozellik"><img src="../img/g/ekran_01_o_yagma.jpg" alt="" loading="lazy"><div><h3>Gece baskınları</h3><p>Karanlıkta yüzeye çık, sandıkları ve binaları yağmala, güneş seni yakmadan asansöre yetiş.</p></div></div>
+    <div class="ozellik"><img src="../img/g/ekran_02_o_nadir.jpg" alt="" loading="lazy"><div><h3>Efsanevi ganimet</h3><p>Nadir sandıklar, efsanevi silahlar, ekipman ve şemalar. Her gece açgözlülükle korku arasında bir kumar.</p></div></div>
+    <div class="ozellik"><img src="../img/s/S5_robot.jpg" alt="" loading="lazy"><div><h3>Mutantlar ve robotlar</h3><p>Silah, el bombası, EMP ve dumanla savaş ya da gölgelerden süzül. Askerlerden bir ekip yanında savaşabilir.</p></div></div>
+    <div class="ozellik"><img src="../img/s/S7_yasam.jpg" alt="" loading="lazy"><div><h3>Yer altı kolonisi</h3><p>200 kişiye kadar 3 katlı bir sığınak kaz: jeneratör, su, sera, ahır, laboratuvar, kışla.</p></div></div>
+    <div class="ozellik"><img src="../img/s/S8_aile.jpg" alt="" loading="lazy"><div><h3>Aileler ve kararlar</h3><p>Çocuklar büyür, büyükler yaşlanır, krizler gelir. Her kararın bir bedeli var.</p></div></div>
+    <div class="ozellik"><img src="../img/s/S9_kusatma.jpg" alt="" loading="lazy"><div><h3>Sığınağını savun</h3><p>Sürü geldiğinde nöbetçilerin girişi tutar, Kışla'dan yedekler koşar.</p></div></div>
+  </div>
+</div></section>
+
+<section id="bolgeler"><div class="kap">
+  <h2>Dört bölge</h2>
+  <p class="alt">Her biri bir öncekinden daha ölümcül ve daha zengin.</p>
+  <div class="bolgeler">
+    <div class="bolge"><span class="zor">I</span><h3>Harabeler</h3><p>Çöl kumuna gömülen bir banliyö. Her koloni burada başlar.</p></div>
+    <div class="bolge"><span class="zor">II</span><h3>Terk Şehir</h3><p>Dükkân önleri, sönük neonlar: mutantların şehri.</p></div>
+    <div class="bolge"><span class="zor">III</span><h3>Askerî Üs</h3><p>Kum torbaları, nöbet kuleleri ve robot devriyeleri.</p></div>
+    <div class="bolge"><span class="zor">IV</span><h3>Uzay Limanı</h3><p>Paslı rıhtımlar, mühürlü hangarlar ve son mekik.</p></div>
+  </div>
+</div></section>
+
+<section id="rehber"><div class="kap">
+  <div class="rehber-cagri"><div><h3>Resmî oyun rehberi</h3><p>Baskınlar, düşmanlar, silahlar, bölmeler, halk yönetimi, savunma ve Yeni Dünya: her sistem ayrıntılı anlatıldı.</p></div><a class="dugme ana" href="guide/">OYUN REHBERİ</a></div>
+</div></section>
+
+<section id="galeri"><div class="kap">
+  <h2>Galeri</h2>
+  <p class="alt">Oyun içi ekran görüntüleri.</p>
+  <div class="galeri"><a href="../img/g/ekran_01_o_yagma.jpg"><img src="../img/g/ekran_01_o_yagma.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_02_o_nadir.jpg"><img src="../img/g/ekran_02_o_nadir.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_03_o_envanter.jpg"><img src="../img/g/ekran_03_o_envanter.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_04_o_ekip.jpg"><img src="../img/g/ekran_04_o_ekip.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_05_o_kat0.jpg"><img src="../img/g/ekran_05_o_kat0.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_06_o_karar.jpg"><img src="../img/g/ekran_06_o_karar.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_07_o_yetenek.jpg"><img src="../img/g/ekran_07_o_yetenek.jpg" alt="" loading="lazy"></a>
+    <a href="../img/g/ekran_08_o_patron.jpg"><img src="../img/g/ekran_08_o_patron.jpg" alt="" loading="lazy"></a></div>
+</div></section>
+
+<section id="sss"><div class="kap">
+  <h2>Sık sorulanlar</h2>
+  <div class="sss">
+    <details><summary>Hangi platformlarda?</summary><p>Önce Android (Google Play). iOS ve PC planlanıyor.</p></details>
+    <details><summary>Ücretsiz mi?</summary><p>Evet, ücretsiz. Oyunda parayla güç satılmaz: silah ve ekipman yalnız yüzeyde bulunur.</p></details>
+    <details><summary>İnternet gerekiyor mu?</summary><p>Hayır. Oyun tamamen internetsiz oynanır; kayıtların cihazında kalır.</p></details>
+    <details><summary>Hangi dillerde?</summary><p>Türkçe, English, Deutsch, Français, 日本語 ve 한국어.</p></details>
+  </div>
+</div></section>
+
+<section class="son" id="oyna"><div class="kap">
+  <h2>Gece kısa.</h2>
+  <p class="alt">İlk oynayanlardan ol: Google Play kapalı testine katıl.</p>
+  <div class="dugmeler"><a class="dugme ana" href="mailto:support@shadowcolonygame.com?subject=Shadow%20Colony">TESTE KATIL</a></div>
+</div></section>
+
+<footer class="alt-bilgi"><div class="kap">
+  <div><a href="../tr/">Ana sayfa</a><a href="../tr/guide/">Rehber</a><a href="../press/">Basın</a><a href="../privacy/">Gizlilik</a></div>
+  <div>Destek: <a href="mailto:support@shadowcolonygame.com">support@shadowcolonygame.com</a> · © 2026 Shadow Colony · Fragman müziği: "Homecoming"</div>
+</div></footer>
+</body>
+</html>

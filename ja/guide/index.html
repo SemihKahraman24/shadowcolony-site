@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ゲームガイド — Shadow Colony</title>
+<meta name="description" content="Shadow Colony公式ゲームガイド:夜のレイド、敵、武器、シェルターの部屋、コロニー運営、防衛、成長、そして新世界。">
+<meta property="og:title" content="Shadow Colony — ゲームガイド">
+<meta property="og:image" content="https://shadowcolonygame.com/img/hero.png">
+<link rel="alternate" hreflang="en" href="https://shadowcolonygame.com/en/guide/">
+<link rel="alternate" hreflang="tr" href="https://shadowcolonygame.com/tr/guide/">
+<link rel="alternate" hreflang="de" href="https://shadowcolonygame.com/de/guide/">
+<link rel="alternate" hreflang="fr" href="https://shadowcolonygame.com/fr/guide/">
+<link rel="alternate" hreflang="ja" href="https://shadowcolonygame.com/ja/guide/">
+<link rel="alternate" hreflang="ko" href="https://shadowcolonygame.com/ko/guide/">
+<link rel="alternate" hreflang="x-default" href="https://shadowcolonygame.com/en/guide/">
+<link rel="icon" href="../../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/site.css">
+<style>.rehber-ust { background:linear-gradient(180deg,rgba(14,19,27,.2),var(--gece)), url("../../img/s/S7_yasam.jpg") center/cover; }</style>
+</head>
+<body>
+<nav class="ust"><div class="kap">
+  <a class="logo" href="../../ja/"><img src="../../img/icon.png" alt="">SHADOW COLONY</a>
+  <div class="bag">
+    <a class="gizle" href="../../ja/#fragman">トレーラー</a>
+    <a class="gizle" href="../../ja/#ozellikler">特徴</a>
+    <a class="gizle aktif" href="../../ja/guide/">ガイド</a>
+    <a class="gizle" href="../../press/">プレス</a>
+    <select class="dil" aria-label="Language" onchange="try{localStorage.setItem('dil',this.options[this.selectedIndex].dataset.kod)}catch(e){};location.href=this.value"><option data-kod="en" value="../../en/guide/">English</option><option data-kod="tr" value="../../tr/guide/">Türkçe</option><option data-kod="de" value="../../de/guide/">Deutsch</option><option data-kod="fr" value="../../fr/guide/">Français</option><option data-kod="ja" value="../../ja/guide/" selected>日本語</option><option data-kod="ko" value="../../ko/guide/">한국어</option></select>
+  </div>
+</div></nav>
+<header class="rehber-ust"><div class="kap">
+  <h1>ゲームガイド</h1>
+  <p>夜に地上へ出て、夜明け前に戻り、地下にコロニーを築け。最初の夜から新世界まで、Shadow Colonyのすべてのシステムを解説。</p>
+</div></header>
+<div class="rehber">
+<aside>
+  <h4>目次</h4>
+  <a href="#temel">1. 基本のサイクル</a>
+  <a href="#ilk-gece">2. 最初の夜</a>
+  <a href="#baskin">3. 夜のレイド</a>
+  <a class="alt-baslik" href="#bilet">チケットとパトロール</a>
+  <a class="alt-baslik" href="#safak">夜明けと太陽</a>
+  <a class="alt-baslik" href="#canta">バッグと気絶</a>
+  <a class="alt-baslik" href="#harita">マップと霧</a>
+  <a class="alt-baslik" href="#yagma">箱・建物・溶鉱炉</a>
+  <a class="alt-baslik" href="#gece-kosullari">夜の状況</a>
+  <a href="#bolgeler">4. 地域</a>
+  <a href="#dusmanlar">5. 敵</a>
+  <a href="#silahlar">6. 武器と装備</a>
+  <a class="alt-baslik" href="#sarf">消耗品</a>
+  <a href="#siginak">7. シェルターと部屋</a>
+  <a class="alt-baslik" href="#kaynaklar">資源</a>
+  <a class="alt-baslik" href="#besin">食料の流れ</a>
+  <a class="alt-baslik" href="#yasam">生命維持</a>
+  <a href="#halk">8. 住民と運営</a>
+  <a class="alt-baslik" href="#aileler">家族と世代</a>
+  <a class="alt-baslik" href="#kararlar">危機と決断</a>
+  <a class="alt-baslik" href="#mevsimler">季節</a>
+  <a href="#savunma">9. シェルター防衛</a>
+  <a href="#uretim">10. 製作と設計図</a>
+  <a href="#ilerleme">11. 成長</a>
+  <a class="alt-baslik" href="#lider">リーダースキル</a>
+  <a class="alt-baslik" href="#projeler">メガプロジェクト</a>
+  <a class="alt-baslik" href="#final">シャトルと新世界</a>
+  <a href="#ipuclari">12. 上級者のコツ</a>
+</aside>
+<main>
+<h2 id="temel">1. 基本のサイクル</h2>
+<p>ある朝、太陽が変わった。オゾン層はわずか3週間で裂け、日の光は命を奪うものになった。生き残った人々は地下鉄のトンネルや鉱山の坑道に逃げ込んだ。あなたはそのシェルターのひとつを率いる<strong>リーダー</strong>だ。</p>
+<p>ゲームは2つのサイクルが噛み合ってできている:</p>
+<div class="kutular">
+  <div class="kutu"><h4>夜:地上</h4><p>エレベーターで地上へ出て、箱や建物を漁り、敵と戦うか逃げ、<strong>夜明け前に</strong>エレベーターへ戻る。</p></div>
+  <div class="kutu"><h4>昼:地下</h4><p>持ち帰った物資で部屋を掘り、住民を働かせ、製作し、研究し、コロニーを広げて襲撃に備える。</p></div>
+</div>
+<p>資源は地上にいる間も、ゲームを閉じている間も貯まり続ける。レイドのたびにコロニーは成長し、成長したコロニーがより厳しいレイドへの備えになる。</p>
+<img class="sahne" src="../../img/s/S2_inis.jpg" alt="エレベーターで地下へ" loading="lazy">
+
+<h2 id="ilk-gece">2. 最初の夜:ステップ解説</h2>
+<ol class="adimlar">
+  <li><strong>地上へ:</strong>シェルターの<strong>地上へ</strong>ボタンでチケットを1枚使い、エレベーターで上がる。</li>
+  <li><strong>箱へ向かう:</strong>光る箱に近づくと自動で漁り始める。埋まったバッグ枠は左上に表示される。</li>
+  <li><strong>時計を見る:</strong>上部のカウンターは夜明けまでの残り時間。ゼロになる前に戻ろう。</li>
+  <li><strong>エレベーターへ戻る:</strong>無事に戻ればバッグの中身はすべてコロニーへ、見つけた装備は倉庫へ入る。</li>
+  <li><strong>シェルターで使う:</strong>スクラップで新しい部屋を掘り、手の空いた住民を仕事に就かせる。</li>
+</ol>
+<div class="not ipucu"><b>最初の5回のレイドはロスなし:</b>気絶しても戦利品は失われない。気楽にゲームを覚えよう。</div>
+
+<h2 id="baskin">3. 夜のレイド</h2>
+<img class="sahne" src="../../img/g/ekran_01_o_yagma.jpg" alt="夜のレイド" loading="lazy">
+<h3 id="bilet">チケットと短期パトロール</h3>
+<ul>
+  <li>地上へ出るたびに<strong>チケット1枚</strong>を使う。チケットは時間で回復し、<strong>最大4枚</strong>まで貯まる。</li>
+  <li><strong>レイド準備室</strong>があるとチケットの回復が速い。クエストや目標でもチケットがもらえる。</li>
+  <li>チケットがない時は<strong>短期パトロール</strong>へ。チケット不要だが戦利品は半分、レアな箱も出ない。</li>
+</ul>
+<h3 id="safak">夜明けと太陽</h3>
+<ul>
+  <li>日が昇ると、光の中にいるものはすべて焼かれる。体力が1秒ごとに減っていく。</li>
+  <li><strong>建物の影</strong>に留まり、影から影へとエレベーターまで走ろう。夜明けに生還すると<strong>ボーナス戦利品</strong>がもらえる。</li>
+  <li>頭装備(溶接ゴーグル、日除けベール、断熱ヘルメット)、<strong>シールド室</strong>、研究所で作る<strong>サンシールド</strong>が太陽ダメージを軽減する。</li>
+  <li>ミュータントも太陽に焼かれ、夜明けには影へ逃げる。ただしロボットには太陽が効かない。</li>
+</ul>
+<h3 id="canta">バッグ、セーフポーチ、気絶</h3>
+<ul>
+  <li>戦利品はバッグ枠に入る。大きいバッグ(バックパック、軍用バッグ)とスキル<strong>広い背中</strong>で枠が増える。</li>
+  <li><strong>セーフポーチ</strong>:中身は気絶しても失われない。いちばん貴重な素材をここへ。</li>
+  <li>体力が尽きると<strong>気絶</strong>する。バッグの<strong>半分</strong>と、その夜に見つけた<strong>アイテムすべて</strong>を失う。リーダーはしばらく休養し、医務室があれば短くなる。</li>
+</ul>
+<h3 id="harita">マップ、探索の霧、大群</h3>
+<ul>
+  <li>マップは右上。歩いた場所が明らかになり、それ以外は<strong>霧</strong>に覆われ、霧の中の敵は見えない。</li>
+  <li>夜の特定のタイミングで、マップの端から<strong>大群</strong>が現れてあなたへ向かってくる。警告が出たら影、建物、エレベーターへ。</li>
+  <li><strong>車両</strong>:マップのどこかの道路に停まっている。ボンネットで<strong>修理</strong>、後部で<strong>給油</strong>、ドアから<strong>乗る</strong>。速くてミュータントを轢けるが、エンジン音が敵を呼ぶ。</li>
+</ul>
+<h3 id="yagma">箱、建物、溶鉱炉、生存者</h3>
+<div class="kutular">
+  <div class="kutu"><h4>レアな箱</h4><p>金色に光る重い金庫。パーツ、設計図、良い装備が出る。たいてい見張りがいる。</p></div>
+  <div class="kutu"><h4>入れる建物</h4><p>病院、学校、工場… 中にはロッカーと、<strong>キーカード</strong>で開く最高の戦利品が眠る施錠部屋がある。</p></div>
+  <div class="kutu"><h4>即席の溶鉱炉</h4><p>バッグのスクラップを溶かす(スクラップ3 → インゴット1)。音と光が出るので近くの敵が寄ってくる。</p></div>
+  <div class="kutu"><h4>生存者</h4><p>閉じ込められた誰か。見張りを倒して解放し、一緒にエレベーターへ戻れば仲間になる。</p></div>
+</div>
+<h3 id="gece-kosullari">夜の状況</h3>
+<p>数回のレイドの後は、およそ半分の夜に特別な状況が付く。遠征パネルで事前に確認できる:</p>
+<table class="tablo"><tr><th>状況</th><th>効果</th></tr>
+<tr><td>霧の夜</td><td>視界が狭く一面がもや。ミュータントに気付かれるのが30%遅い · 戦利品+15%</td></tr>
+<tr><td>満月</td><td>ミュータントが15%速く、遠くまで見える · レアな箱+1</td></tr>
+<tr><td>静かな夜</td><td>敵30%減 · 戦利品−15%</td></tr>
+<tr><td>深紅の夜</td><td>敵30%増 · 戦利品+40%</td></tr>
+</table>
+<p>週ごとの<strong>嵐</strong>や<strong>夜のイベント</strong>(黄金の夜、血の月など)もルールを変える。各地域には<strong>ボスの夜</strong>がある。</p>
+
+<h2 id="bolgeler">4. 地域</h2>
+<p>4つの地域が順に解放される。各地域の端には次へ続く<strong>地域ゲート</strong>がある。黄色のゲートは研究所で作るキットで修理し、緑のゲートは通過できる。</p>
+<table class="tablo"><tr><th>地域</th><th>特徴</th><th>ボス</th></tr>
+<tr><td>I · 廃墟</td><td>砂漠の砂に沈む郊外。すべてのコロニーはここから始まる。</td><td>灰の巨人</td></tr>
+<tr><td>II · 廃都市</td><td>店先と消えたネオン:ミュータントの街。</td><td>溶岩の巨人</td></tr>
+<tr><td>III · 軍事基地</td><td>土嚢、見張り塔、ロボットの巡回。電子部品とパワーセルが手に入る。</td><td>戦闘ロボット</td></tr>
+<tr><td>IV · 宇宙港</td><td>錆びた埠頭、封鎖された格納庫、そして最後のコロニーシャトル。</td><td>軌道の番人</td></tr>
+</table>
+<p>ボスを倒すと地域が制圧され、レア装備が手に入る。宇宙港を気絶せずにクリアすると<strong>悪夢ティア</strong>(最大10)が解放される。敵は強く、戦利品は豊富に。</p>
+
+<h2 id="dusmanlar">5. 敵</h2>
+<img class="sahne" src="../../img/s/S3b.jpg" alt="ミュータント" loading="lazy">
+<h3>ミュータント:光の中に残り、死ななかった者たち</h3>
+<table class="tablo"><tr><th>敵</th><th>行動</th><th>対処法</th></tr>
+<tr><td>焼けたミュータント</td><td>夜にうろつき、音に寄ってくる。夜明けには影へ逃げる。</td><td>静かに進む。信号弾で別の方向へ誘導する。</td></tr>
+<tr><td>ランナー</td><td>最速だが脆い。</td><td>走っても逃げ切れない。角で待ち、近づいたら叩く。</td></tr>
+<tr><td>タンクミュータント</td><td>巨大で遅く、耐久3倍。捕まると強烈な一撃。</td><td>逃げるのは簡単、倒すのは高くつく。弾薬と相談しよう。</td></tr>
+<tr><td>スピッター</td><td>遠くから酸を吐き、近づくと離れる。</td><td>壁の陰に入るか、一気に詰める。接近戦に弱い。</td></tr>
+<tr><td>爆裂体</td><td>ガスが詰まっていて、近づくか死ぬと爆発する。</td><td>遠くから撃ち、他の敵のそばで破裂させる。</td></tr>
+</table>
+<h3>ロボット:艦隊の兵士</h3>
+<table class="tablo"><tr><th>敵</th><th>行動</th><th>対処法</th></tr>
+<tr><td>監視ロボット</td><td>飛行し攻撃はしないが、あなたを見つけると警報を鳴らす。周囲の敵が全員集まる。</td><td>視界に入る前に撃ち落とすか、迂回する。</td></tr>
+<tr><td>警備ロボット</td><td>基地と宇宙港を守る。前方の円錐が視界。</td><td>赤い線が光ったらレーザーが来る。すぐ横へ避けよう。EMPで黙らせる。</td></tr>
+<tr><td>夜明けロボット</td><td>太陽が効かず、夜明けにマップの端から降下してくる。</td><td>信号弾に釣られない。倒すと電子部品を落とす。</td></tr>
+</table>
+<div class="not"><b>信号弾</b>はミュータントを光へ引き寄せるが、ロボットには効かない。<b>EMP</b>はロボットだけを止め、ミュータントには無効。</div>
+
+<h2 id="silahlar">6. 武器と装備</h2>
+<img class="sahne" src="../../img/g/ekran_03_o_envanter.jpg" alt="インベントリと装備" loading="lazy">
+<p>装備枠は4つ:<strong>武器</strong>、<strong>頭</strong>(太陽対策)、<strong>バッグ</strong>(枠数)、<strong>お守り</strong>(幸運のお守り:戦利品 · ハートのロケット:体力 · 風の羽根:逃走)。</p>
+<table class="tablo"><tr><th>武器</th><th>種類</th><th>メモ</th></tr>
+<tr><td>バール、マチェーテ、大ハンマー</td><td>近接</td><td>弾薬を使わない。</td></tr>
+<tr><td>ピストル</td><td>銃</td><td>ピストル弾。初期武器。</td></tr>
+<tr><td>ショットガン</td><td>銃</td><td>1発で散弾3発。至近距離で強力。</td></tr>
+<tr><td>クロスボウ</td><td>銃</td><td>無音で射程が長い。敵を起こさない。</td></tr>
+<tr><td>狩猟ライフル</td><td>銃</td><td>長射程の重い一撃。弾は貴重。</td></tr>
+<tr><td>機関銃</td><td>銃</td><td>連射。弾薬を大量に消費する。</td></tr>
+</table>
+<ul>
+  <li><strong>レアリティ:</strong>コモン · レア · レジェンド。レアリティと強化レベルでダメージと耐久値が上がる。</li>
+  <li><strong>弾薬:</strong>銃はそれぞれ専用の弾を使う。弾切れになると銃床で殴る。</li>
+  <li><strong>耐久値:</strong>攻撃ごとに減り、ゼロで壊れる。研究所で修理できる。</li>
+  <li>生還すれば見つけた装備は倉庫へ。気絶すれば失われる。</li>
+</ul>
+<h3 id="sarf">消耗品(クイックスロット)</h3>
+<p>攻撃ボタンの周りの2つのスロットに消耗品を入れる。»で切り替え。</p>
+<table class="tablo"><tr><th>アイテム</th><th>効果</th></tr>
+<tr><td>信号弾</td><td>ミュータントを光へ引き寄せる(ロボットは釣られない)。</td></tr>
+<tr><td>手榴弾</td><td>時間差で爆発する範囲攻撃。音で遠くの敵も目を覚ます。</td></tr>
+<tr><td>EMPグレネード</td><td>ロボットを6秒間停止:射撃も移動も警報もできない。</td></tr>
+<tr><td>発煙弾</td><td>5秒間、敵があなたを見失う。逃走用。</td></tr>
+<tr><td>注射器</td><td>即座に体力+40。</td></tr>
+<tr><td>救急箱</td><td>即座に体力+100。製作は難しく、研究所Lv3と医務室が必要。</td></tr>
+</table>
+<p>レイド前に農場の産物から<strong>レイド食</strong>(スープ、ミルクと卵、肉のシチュー、果物)を選ぶと、体力・ダメージ・速度にボーナスが付く。</p>
+
+<h2 id="siginak">7. シェルターと部屋</h2>
+<img class="sahne" src="../../img/s/S7_yasam.jpg" alt="地下コロニー" loading="lazy">
+<p>シェルターは<strong>3フロア</strong>(計144部屋)、人口上限は<strong>200人</strong>。土の壁に向かって歩くと部屋を掘れる。同じ種類の部屋が隣り合うとホールに統合される。どの部屋も強化でき、<strong>働き手のいない部屋は何も生産しない</strong>。</p>
+<table class="tablo"><tr><th>部屋</th><th>役割</th></tr>
+<tr><td>発電機</td><td>エネルギーを生産。エネルギーが尽きると生産が止まる。</td></tr>
+<tr><td>ソーラーパネル</td><td>昼は無料でエネルギー、夜は発電しない。</td></tr>
+<tr><td>バッテリー</td><td>エネルギー上限を上げ、昼の電力を夜に回す。</td></tr>
+<tr><td>浄水器</td><td>飲み水を生産。</td></tr>
+<tr><td>貯水タンク</td><td>水の上限を上げる。</td></tr>
+<tr><td>温室</td><td>野菜。小麦と果物は種で解放。</td></tr>
+<tr><td>家畜小屋</td><td>牛とヤギ:ミルクと肉。水を飲むが温室より多くの食料を生む。</td></tr>
+<tr><td>鶏小屋</td><td>ニワトリ:卵と肉。水は少しでいい。</td></tr>
+<tr><td>食堂</td><td>料理人が消費を減らす。4種の食料源がそろうとバランスの取れた食事で士気アップ。</td></tr>
+<tr><td>冷蔵庫</td><td>食料の上限を上げ、腐敗を遅らせる。</td></tr>
+<tr><td>メイン倉庫</td><td>倉庫グリッドの枠とスクラップの上限を増やす。</td></tr>
+<tr><td>寮</td><td>ベッドを増やす:人口が増える余地。</td></tr>
+<tr><td>換気装置</td><td>レベルごとに12人分の空気。</td></tr>
+<tr><td>空調</td><td>シェルターを快適な16〜26°Cに保つ。</td></tr>
+<tr><td>医務室</td><td>負傷者の回復が速く、気絶したリーダーの休養も短くなる。</td></tr>
+<tr><td>学校</td><td>住民を教育し熟練度を上げる(★5は学校でのみ)。</td></tr>
+<tr><td>研究所</td><td>すべての製作:弾薬、消耗品、装備、修理、強化、研究。</td></tr>
+<tr><td>兵舎</td><td>兵士:襲撃時に入口を守り、レイドにも同行する。</td></tr>
+<tr><td>シールド室</td><td>地上での太陽ダメージを軽減。</td></tr>
+<tr><td>レイド準備室</td><td>チケットの回復が速くなる。</td></tr>
+<tr><td>無線室</td><td>新しい地域の信号を拾い、無線記録を解読する。</td></tr>
+</table>
+<h3 id="kaynaklar">資源</h3>
+<div class="kutular">
+  <div class="kutu"><h4>水 · 食料 · エネルギー</h4><p>生存に欠かせない3つ。どれかが尽きると、まず士気が、次に体力が下がる。</p></div>
+  <div class="kutu"><h4>スクラップ</h4><p>掘削、強化、修理に。地上と遠征から。</p></div>
+  <div class="kutu"><h4>パーツ · 電子部品</h4><p>パーツはレアな箱から、電子部品はロボットから。武器強化、ゲート、車両に。</p></div>
+  <div class="kutu"><h4>インゴット · 燃料</h4><p>インゴットは溶鉱炉で作られ、製作に使う。燃料は車両と発電機の補助に。</p></div>
+  <div class="kutu"><h4>パワーセル</h4><p>最も貴重:基地と宇宙港のレアな箱、ロボットのボスから。宇宙港ゲートとシャトルに必要。</p></div>
+  <div class="kutu"><h4>クリスタル · チケット</h4><p>クリスタルは見た目とコスメ専用。強さは売っていない。チケットは地上へ出る権利。</p></div>
+</div>
+<h3 id="besin">食料の流れ</h3>
+<ul>
+  <li><strong>温室</strong>では野菜、小麦、果物を育てる。小麦は家畜のエサになり(+20%)、果物は士気を上げる。</li>
+  <li><strong>家畜小屋</strong>と<strong>鶏小屋</strong>の群れは、水と食料があり世話係が働いていれば増える。<strong>屠畜</strong>ですぐに肉が手に入る。群れのリーダーを1日1回なでよう(+10%)。</li>
+  <li>収穫物は部屋に貯まるので、タップして回収。種は地上から倉庫へ入り、温室は在庫を使う。</li>
+</ul>
+<img class="sahne" src="../../img/s/Y2_sera.jpg" alt="温室" loading="lazy">
+<h3 id="yasam">生命維持:空気と温度</h3>
+<ul>
+  <li>エレベーターの縦穴は10人分の空気をまかなう。それ以上は<strong>換気装置</strong>が必要(レベルごとに12人)。</li>
+  <li>昼は太陽と発電機がシェルターを温め、夜は冷える。<strong>空調</strong>で16〜26°Cを保つ。</li>
+  <li>環境が悪化すると、まず士気、次に生産、最後に体力が下がる。</li>
+</ul>
+
+<h2 id="halk">8. 住民とコロニー運営</h2>
+<p>コロニストにはそれぞれ名前と性格があり、仕事ごとに別々の<strong>熟練度</strong>(★1〜★5)がある。熟練者は★1の2倍生産する。同じ仕事を続けると星が増え(★4まで)、★5には学校が必要。別の仕事に移すと、そこでは新人だ。</p>
+<ul>
+  <li><strong>コロニー › 管理:</strong>部門の優先度を設定(オフ / 低 / ノーマル / 高)。不足した生存資源は自動で<strong>緊急</strong>になる。特定の人を部屋に固定することもできる。</li>
+  <li><strong>士気</strong>:食事の多様さ、生活環境、出来事、決断に左右される。士気が低いと生産が落ちる。</li>
+  <li><strong>個人的な願い</strong>:コロニストは時々何かを欲しがる(おもちゃ、形見、本…)。叶えると星、士気、クリスタルがもらえる。</li>
+</ul>
+<h3 id="aileler">家族と世代</h3>
+<img class="sahne" src="../../img/s/S8_aile.jpg" alt="家族" loading="lazy">
+<ul>
+  <li>コロニストはカップルになり、子どもが生まれる。子どもは成長すると働き始める。</li>
+  <li>全員がゲーム内の1年ごとに1歳年を取る。第一世代はやがて老い、高齢者の効率は下がる。</li>
+  <li>失った人は悲しみを残し、追悼の壁がその名を刻む。</li>
+</ul>
+<h3 id="kararlar">危機と決断</h3>
+<p>コロニーで何かが起きると(飢饉、門前の移民、疫病、士気の崩壊、襲撃の後始末)、2択の決断カードが現れる。コロニーが大きくなると世代の決断も訪れる。子どもは働くべきか学ぶべきか、高齢者は引退すべきか、冬にどう備えるか。<strong>すべての決断に代償があり</strong>、その影響はしばらく続く。</p>
+<img class="sahne" src="../../img/g/ekran_06_o_karar.jpg" alt="決断カード" loading="lazy">
+<h3 id="mevsimler">季節</h3>
+<p>各季節はゲーム内8日、1年は32日。最初の1週間は影響がなく、その後徐々に強まる。</p>
+<table class="tablo"><tr><th>季節</th><th>効果</th></tr>
+<tr><td>春</td><td>水+15%、食料+10%</td></tr>
+<tr><td>夏</td><td>水−15%、食料+10%</td></tr>
+<tr><td>秋</td><td>食料+25%、略奪者の襲撃が強くなる</td></tr>
+<tr><td>冬</td><td>食料−20%、大群が強く、疫病が多い。暖房にスクラップかエネルギーを使う</td></tr>
+</table>
+
+<h2 id="savunma">9. シェルター防衛</h2>
+<img class="sahne" src="../../img/s/S9_kusatma.jpg" alt="包囲" loading="lazy">
+<p>コロニーが大きくなるとシェルターが襲撃される。警告が始まり、サイレンが鳴り、襲撃者がエレベーターから降りてくる。</p>
+<table class="tablo"><tr><th>襲撃</th><th>弱点</th></tr>
+<tr><td>大群</td><td>壁に阻まれる:防壁とシールド室。</td></tr>
+<tr><td>略奪者</td><td>兵士に弱い。満杯の倉庫に引き寄せられる。</td></tr>
+<tr><td>ロボット</td><td>レーダーと研究所が妨害する。</td></tr>
+</table>
+<ul>
+  <li><strong>入口の見張り:</strong>兵士はまず入口の部屋で迎え撃つ。1人倒れると<strong>兵舎</strong>から交代要員が来る。</li>
+  <li><strong>兵士 自動:</strong>防衛力が予想される襲撃を下回ると、ゲームが自動で兵舎に兵士を配置する(オフにもできる)。</li>
+  <li><strong>防衛!</strong>ボタンでリーダーも参戦。一撃ごとに防衛力が上がる。</li>
+  <li>防衛力が襲撃の2倍あれば門前で撃退できる。連敗すると襲撃の頻度が下がる。</li>
+</ul>
+
+<h2 id="uretim">10. 製作、設計図、研究</h2>
+<ul>
+  <li><strong>研究所</strong>の製作は4つのタブに分かれる:<strong>武器 · 弾薬 · 装備 · 道具と消耗品</strong>。レベルが上がると新しいレシピが解放される。</li>
+  <li><strong>設計図</strong>:多くの武器、装備、弾薬、消耗品はまず設計図が必要。設計図はレアな箱からインベントリに入る。タップ › <strong>習得</strong>。キットとサンシールドは設計図不要。</li>
+  <li><strong>研究</strong>で永続的な強化(自動収穫など)が解放される。研究ポイントは研究所に貯まる。</li>
+  <li>ときどき<strong>キャラバン</strong>が来る。エレベーターの部屋で交易しよう。</li>
+</ul>
+
+<h2 id="ilerleme">11. 成長</h2>
+<p>クエスト画面の<strong>旅路バー</strong>が大きな目標を示す:廃墟 → 都市 → 基地 → 宇宙港 → シャトル → 最終章 → 新世界。デイリー・ウィークリークエスト、7日間ログインボーナス、実績が道中で報酬をくれる。</p>
+<h3 id="lider">リーダーレベルとスキル</h3>
+<p>レイドでリーダーのレベルが上がる。5レベルごとにスキルポイント1。スキルは8種類、各3段階。全部は取れないので、自分のスタイルを選ぼう。リセットは無料。</p>
+<table class="tablo"><tr><th>スキル</th><th>効果(段階ごとに上昇)</th></tr>
+<tr><td>忍び足</td><td>ミュータントに気付かれる距離が短くなる。</td></tr>
+<tr><td>早業</td><td>箱を開けるのが速くなる。</td></tr>
+<tr><td>頑丈</td><td>地上での体力が増える。</td></tr>
+<tr><td>射手</td><td>武器ダメージが上がる。</td></tr>
+<tr><td>ランナー</td><td>走る速度が上がる。</td></tr>
+<tr><td>倹約家</td><td>一部の射撃で弾薬を消費しない。</td></tr>
+<tr><td>広い背中</td><td>インベントリ枠が増える。</td></tr>
+<tr><td>スカベンジャー</td><td>箱の戦利品が増える。</td></tr>
+</table>
+<img class="sahne" src="../../img/g/ekran_07_o_yetenek.jpg" alt="リーダースキル" loading="lazy">
+<h3 id="projeler">メガプロジェクト</h3>
+<p>コロニー › プロジェクト:余った資源を永続的な力に変える。同時に進むのは1段階だけで、段階ごとに時間が長くなる。5段階の後は<strong>マスター</strong>レベルが始まる。</p>
+<div class="kutular">
+  <div class="kutu"><h4>給水塔</h4><p>水が増え、貯水量も増える。</p></div>
+  <div class="kutu"><h4>核融合炉</h4><p>すべての部屋にエネルギーを。</p></div>
+  <div class="kutu"><h4>水耕ドーム</h4><p>食料が増え、住民が幸せに。</p></div>
+  <div class="kutu"><h4>防壁</h4><p>襲撃、特に大群に強くなる。</p></div>
+  <div class="kutu"><h4>レーダー網</h4><p>襲撃を事前に察知し、ロボットを妨害する。</p></div>
+</div>
+<h3 id="final">シャトル、最後の夜、新世界</h3>
+<img class="sahne" src="../../img/s/S6b.jpg" alt="コロニーシャトル" loading="lazy">
+<p>ロボットは宇宙港にある最後の<strong>コロニーシャトル</strong>を封鎖し、燃料セルを港中にばらまいた。パワーセルを集め、シャトルを修理し、<strong>最後の夜</strong>に打ち上げよう。開拓者たちは住める惑星へと旅立つ。</p>
+<p>その後はいつでもコロニーごと<strong>新世界</strong>へ移住できる。すべてがゼロから始まるが、<strong>レガシーポイント</strong>、クリスタル、ロボット、見た目、悪夢ティアは引き継がれる。レガシーポイントで永続的な特典を取得でき、新しい世界にはそれぞれ独自のルールがある。</p>
+
+<h2 id="ipuclari">12. 上級者のコツ</h2>
+<div class="not ipucu"><b>欲には限度がある。</b>バッグが満杯か、カウンターが半分を切ったら帰還を考えよう。気絶するとその夜のアイテムがすべて消える。</div>
+<div class="not ipucu"><b>セーフポーチを空にしない。</b>パーツ、パワーセル、電子部品は真っ先にそこへ。</div>
+<div class="not ipucu"><b>まず空気、水、食料。</b>人口が増えたら換気装置を忘れずに。空気が悪くなると生産が静かに落ちる。</div>
+<div class="not ipucu"><b>熟練者を異動させない。</b>★4の働き手を別の仕事に移すと、そこでは★1からやり直し。</div>
+<div class="not ipucu"><b>兵舎は早めに。</b>襲撃はコロニーとともに強くなる。入口の見張りが最初の防衛線だ。</div>
+<div class="not ipucu"><b>クロスボウは無音。</b>監視ロボットや眠る大群を、何も起こさずに仕留める最良の武器。</div>
+<div class="not uyari"><b>影を読め。</b>夜明けにあなたを生かすのは、エレベーターへの最短ルートではなく、最も影の多いルートだ。</div>
+</main>
+
+</div>
+<footer class="alt-bilgi"><div class="kap">
+  <div><a href="../../ja/">ホーム</a><a href="../../ja/guide/">ガイド</a><a href="../../press/">プレス</a><a href="../../privacy/">プライバシー</a></div>
+  <div>サポート: <a href="mailto:support@shadowcolonygame.com">support@shadowcolonygame.com</a> · © 2026 Shadow Colony · トレーラー音楽:「Homecoming」</div>
+</div></footer>
+<a class="yukari" href="#" aria-label="↑">↑</a>
+</body>
+</html>
