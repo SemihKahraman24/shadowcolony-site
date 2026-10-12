@@ -72,3 +72,11 @@ footer.alt-bilgi a:hover { color:var(--turuncu); }
 .adimlar li::before { content:counter(adim); position:absolute; left:12px; top:9px; width:28px; height:28px; border-radius:50%; background:var(--turuncu); color:#1a1206; font-weight:800; display:flex; align-items:center; justify-content:center; font-family:"Barlow Condensed"; }
 @media (max-width:860px) { .rehber { grid-template-columns:1fr; } .rehber aside { position:static; max-height:none; border-right:0; border-bottom:1px solid var(--cizgi); padding:0 0 12px; } .tablo { font-size:.9rem; } }
 .yukari { position:fixed; right:16px; bottom:16px; background:var(--koyu); border:1px solid var(--cizgi); color:var(--yazi); border-radius:50%; width:44px; height:44px; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1.2rem; }
+
+/* site müziği düğmesi (sol alt; sağ alt "yukarı" düğmesinin) */
+.muzik-dugme { position:fixed; left:16px; bottom:16px; z-index:30; width:46px; height:46px; border-radius:50%; background:rgba(30,42,68,.9); border:1px solid var(--cizgi); color:var(--soluk); display:flex; align-items:center; justify-content:center; cursor:pointer; padding:0; backdrop-filter:blur(6px); transition:color .2s, border-color .2s; }
+.muzik-dugme:hover { color:var(--yazi); }
+.muzik-dugme .dalga { display:none; }
+.muzik-dugme.acik { color:var(--turuncu); border-color:var(--turuncu); }
+.muzik-dugme.acik .dalga { display:inline; }
+.muzik-dugme.acik .kapali { display:none; }
